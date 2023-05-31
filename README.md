@@ -1,3 +1,4 @@
+
 # Hello everyone! I'm [Milo-JY] 👋 Welcome! 
 ## 🌱 I am currently completing developer training
 
@@ -10,6 +11,7 @@
 ![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)
 ![Java](https://img.shields.io/badge/Java-orange?style=flat-square&logo=java)
+<img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="25" height="25" />
 ![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql)
 ![MariaDB](https://img.shields.io/badge/MariaDB-black?style=flat-square&logo=mariadb)
 
