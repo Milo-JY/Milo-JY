@@ -1,4 +1,4 @@
-
+![a building](https://github.com/Milo-JY/Milo-JY/edit/main/favorite01.jpg)
 # Hello everyone! I'm [Milo-JY] 👋 Welcome! 
 ## 🌱 I am currently completing developer training
 
