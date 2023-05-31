@@ -1,4 +1,4 @@
-### Hello everyone! I'm [Milo-JY] 👋 Welcome! 
+# Hello everyone! I'm [Milo-JY] 👋 Welcome! 
 
 ## I am currently completing developer training 🌱
 
