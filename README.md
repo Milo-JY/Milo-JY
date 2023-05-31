@@ -1,4 +1,9 @@
-### Hi there 👋
+### Hello everyone 👋 I am currently completing developer training 🌱
+
+
+
+
+
 
 <!--
 **Milo-JY/Milo-JY** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
