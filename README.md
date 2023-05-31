@@ -1,6 +1,5 @@
 # Hello everyone! I'm [Milo-JY] 👋 Welcome! 
-<hr>
-## I am currently completing developer training 🌱
+## 🌱 I am currently completing developer training
 
 
 ### Languages and Tools:
