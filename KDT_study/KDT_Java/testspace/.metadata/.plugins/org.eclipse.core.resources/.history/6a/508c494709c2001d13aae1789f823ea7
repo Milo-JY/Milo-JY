@@ -1,0 +1,9 @@
+package com.jjy.sub1;
+
+public class Sub1 {
+	public void test() {
+		System.out.println("Sub1");
+
+	}
+
+}

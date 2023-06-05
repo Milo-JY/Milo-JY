@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img[src="../../img/img_jeep_logo.png"] {
+            width: 150px;
+            display: none;
+        }
+        
+        h2:nth-of-type(1):hover+img {
+            display: inline-block;
+        }
+        
+        img[src="../../img/img_starbucks_logo.jpg"] {
+            width: 200px;
+            visibility: hidden;
+        }
+
+        h2:nth-of-type(2):hover+img {
+            visibility: visible;
+        }
+        
+        /* 
+                none 과 visibility 의 차이는,
+            none은 웹페이지 전면에 영역을 차지하는 것이 없이 숨김 상태.
+            visibility는 영역을 차지하면서도 숨김.
+        */
+
+    </style>
+</head>
+
+<body>
+    <h1>display(none), visibility(hidden, visible)</h1>
+    <hr>
+
+    <h2>JEEP</h2>
+    <img src="../../img/img_jeep_logo.png" alt="JEEP LOGO">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam fuga rem natus modi non porro alias
+        esse
+        cum deserunt ut, facere voluptatibus tenetur in ea repellat, asperiores suscipit laborum.
+    </p>
+    <hr>
+
+    <h2>STARBUCKS</h2>
+    <img src="../../img/img_starbucks_logo.jpg" alt="STARBUCKS LOGO">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam fuga rem natus modi non porro alias
+        esse
+        cum deserunt ut, facere voluptatibus tenetur in ea repellat, asperiores suscipit laborum.
+    </p>
+</body>
+
+</html>

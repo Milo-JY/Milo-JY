@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button 태그</title>
+
+    <style>
+        .btn_img_size {
+            width: 30px;
+            height: 30px;
+        }
+
+        button {
+            border: none;
+            background: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./server.html" name="studentInfo">
+        <div>
+            <label for="named">성명 : </label>
+            <input type="text" id="named" name="named" minlength="2" maxlength="7" required>
+        </div>
+    
+        <div>
+            <label for="stNum">학번 : </label>
+            <input type="text" id="stNum" name="stNum" minlength="2" maxlength="7" required>
+        </div>
+
+        <input type="image" class="btn_img_size" src="../image/icon_submit.png" alt="전송 버튼">
+    </form>    
+    <hr>
+    <!-- form 안에 div에 상속 된 라벨과 input을 그리고 이미지 input을 넣어 묶어주고, 버튼 input 생성 시 타입은 "image"로 만들어 준다 
+
+     -->
+    <form action="./server.html" name="parents">
+        <div>
+            <label>아빠 : 
+                <input type="text" name="father" placeholder="아빠이름" minlength="2" maxlength="8" required>
+            </label>
+        </div>
+        
+        <div>
+            <label>엄마 : 
+                <input type="text" name="mother" placeholder="엄마이름" minlength="2" maxlength="8" required>
+            </label>
+        </div>
+
+        <button>
+            <img class="btn_img_size" src="../image/icon_submit.png" alt="전송 버튼">
+        </button>
+
+        <button type="reset">
+            <img class="btn_img_size" src="../image/icon_return.png" alt="초기화 버튼">
+        </button>
+    </form>
+</body>
+
+</html>

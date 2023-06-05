@@ -1,0 +1,50 @@
+package com.jjy.test;
+
+class Car {
+	// 클래스 멤버 필드나 메서드에 대햏 접근 지정자를 private으로 지정한 경우 서브 클래스에 상속은 되나 선언한
+	
+	// 클래스 내로 접근 제한이 되므로 상속을 받은 서브 클래스이더라도 25행과 같이 직접 접근은 불가.
+	private String purposeUse;
+	String name;
+	String color;
+	boolean gasoline;
+	
+	public String getPurposeUse() {
+		return purposeUse;
+	}
+	
+	public void setPerposeUse(String purposeUse) {
+		this.purposeUse = purposeUse;
+	}
+}
+
+class Jeep extends Car { 
+	int ton;
+	
+	Jeep(String name, String color, boolean gasoline, int ton) {
+		/*
+		 * 슈퍼 클래스에 생성자가 존재하지 않으므로 super키워드를 통한 초기화 불필요.
+		 * 따라서 아래와 같이 상속된 필드에 직접 초기화.
+		*/
+		
+//		this.purposeUse="군용 트럭";
+		setPerposeUse("군용트럭");
+		this.name = name;
+		this.color = color;
+		this.gasoline = gasoline;
+		this.ton = ton;
+	}
+}
+
+
+
+public class Main {
+	public static void main(String[] args) {
+		Jeep humvee=new Jeep("험비", "위장색", false, 2);
+		
+		System.out.println("사용 용도 : " + humvee.getPurposeUse());
+		System.out.println("차 량 명 : " + humvee.name);
+		System.out.println("색   상 : " + humvee.name);
+		System.out.println("" + humvee.);
+	}
+}

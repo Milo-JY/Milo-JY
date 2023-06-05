@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+}
+
+div {
+    height: 30px;
+    width: 400px;
+}
+
+h2+div {
+    background-color: green;
+}
+
+h2+div+div {
+    background-color: yellow;
+}
+
+.box1,
+.box2 {
+    padding: 10px 0;
+}
+
+
+/* 수직 마진은 하나의 마진으로 상쇄 통합. */
+.box3,
+.box4 {
+    margin: 10px 0;
+}
+
+/* 수직 마진이 다르면 큰쪽으로 수렴 */
+.box5 {
+    margin: 20px 0;
+}
+
+.box6 {
+    margin: 10px 0;
+}
+
+.

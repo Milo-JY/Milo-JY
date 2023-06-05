@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- div{$}*100 -->
+<!-- div{$@101}*100 -->
+<!-- div{$@-101}*100 -->
+<!-- div[class=num$]*100 -->
+
+<body>
+    <form action="#">
+
+        <fieldset>
+            <legend>필수입력</legend>
+            
+            <div>
+                <label>이름
+                    <input type="text" name="userName" required>
+                </label>
+            </div>    
+            <div>
+                <label>이메일
+                    <input type="email" name="userEmail" required>
+                </label>
+            </div>
+    
+            <div>    
+                <label>아이디
+                    <input type="text" name="userID" required>
+                </label>
+            </div>
+            
+            <div>
+                <label>비밀번호
+                    <input type="password" name="userPSW" required>
+                </label>
+            </div>
+        </fieldset>    
+        <hr>
+
+        <fieldset>
+            <legend>선택입력</legend>
+            
+            <div>성별 :
+                <label>
+                    <input type="radio" name="gender" value="man" checked>
+                </label>
+                
+                <label>
+                    <input type="radio" name="gender" value="woman">
+                </label>
+            </div>
+            
+            <div>취미 :
+                <label>독서
+                    <input type="checkbox" name="hobby" value="reading">
+                </label>
+                
+                <label>게임
+                    <input type="checkbox" name="hobby" value="game">
+                </label>
+                
+                <label>운동
+                    <input type="checkbox" name="hobby" value="exercise">
+                </label>
+                
+                <label>등산
+                    <input type="checkbox" name="hobby" value="hiking">
+                </label>
+            </div>
+            
+            <div>사진 첨부 :
+                <input type="file" name="uploadPictures">
+            </div>
+            
+            <div>화면 밝기 :
+                <input type="range" min="1" max="10" value="8" >
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>데이터 전송</legend>
+            
+            <div>
+                <button type="button" name="trans">전송</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

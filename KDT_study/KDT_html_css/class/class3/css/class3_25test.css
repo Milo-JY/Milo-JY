@@ -1,0 +1,75 @@
+.deco {
+    color: red;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+
+/* 
+    text-decoration-style 또는 color 등과 같은 속성을 적용 할 때는,
+
+    ==>> 반드시! text-decoration 속성이 설정 되어 있어야함.
+*/
+.line-through2 {
+    text-decoration: line-through underline overline dotted;
+}
+
+.line-color {
+    text-decoration-color: turquoise;
+}
+
+.fontStyle,
+em {
+    color: cornflowerblue;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* oblique 과 italic 은 동일한 폰트. */
+
+.oblique {
+    font-style: oblique;
+    text-decoration: line-through;
+    text-decoration-style: double;
+}
+
+[class^="fontStyle"]:hover,
+em:hover {
+    font-style: normal;
+}
+
+.transform {
+    color: darkorange;
+}
+
+/* 대문자로 전체 변환 */
+.upper:hover {
+    text-transform: uppercase;
+}
+
+/* 소문자로 전체 변환. */
+.lower:hover {
+    text-transform: lowercase;
+}
+
+/* 단어의 첫 글자를 대문자로 */
+.capitalize:hover {
+    text-transform: capitalize;
+}
+
+/* 아래 첨자 형태의 대문자 */
+.font-variant_smallCaps:hover {
+    font-variant: small-caps;
+}

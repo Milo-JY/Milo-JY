@@ -1,0 +1,82 @@
+.box1 {
+    background-color: brown;
+}
+
+.box2 {
+    background-color: blueviolet;
+}
+
+.box3 {
+    background-color: blue;
+}
+
+.box4 {
+    background-color: red;
+}
+
+.box5 {
+    background-color: green;
+}
+
+.box6 {
+    background-color: yellowgreen;
+}
+
+.box7 {
+    background-color: black;
+}
+
+.box8 {
+    background-color: coral;
+}
+
+.box9 {
+    background-color: cadetblue;
+}
+
+.box10 {
+    background-color: deeppink;
+}
+
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.grid {
+    display: grid;
+}
+
+/* ====================================== */
+
+/* 
+    < auto-fill, auto-fit 공동 특성 >
+
+    - 공간이 남으면 아이템의 크기가 들어갈 수 있으면 채워지며 반대로 공간이 부족해지면 랩핑해서 개행함.
+*/
+
+.container1 {
+    grid-template-columns: repeat(auto-fill, 100px);
+}
+
+.container2 {
+    grid-template-columns: repeat(auto-fit, 100px);
+}
+
+/* 
+    < 차이점 > 
+
+    -auto-fill : 창을 늘려 공간이 생기면 아이템 크기가 유지됨.  
+    -auto-fit : 아이템 크기가 늘어나 공간을 채움
+    */
+
+.container3 {
+    grid-template: repeat(2, 50px) / repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.container4 {
+    grid-template: repeat(2, 50px) / repeat(auto-fit, minmax(100px, 1fr));
+}
+

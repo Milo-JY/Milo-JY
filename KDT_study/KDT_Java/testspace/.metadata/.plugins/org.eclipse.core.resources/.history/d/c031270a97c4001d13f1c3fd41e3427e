@@ -1,0 +1,58 @@
+package com.jjy.test;
+
+class Car {
+	String name;
+	String color;
+	boolean gasoline;
+
+	Car(String name, String color, boolean gasoline) {
+		this.name = name;
+		this.color = color;
+		this.gasoline = gasoline;
+	}
+
+	void run() {
+		if (gasoline) {
+			System.out.println("부릉 부릉");
+		} else {
+			System.out.println("덜컹 덜컹");
+		}
+	}
+
+	void stop() {
+		System.out.println("끼이익");
+	}
+}
+
+class Truck extends Car { 
+
+	int ton; 
+
+	Truck(String name, String color, boolean gasoline, int ton) {
+		super(name, color, gasoline);
+		this.ton = ton;
+	}
+	
+	public void run() {
+		System.out.println("우당탕 쿵쾅");
+	}		
+	
+	public void convey() {
+		System.out.println("짐을 실어 나른다.");
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Car myCar = new Car("제네시", "빨강", true);
+		
+		Car yourCar = new Truck("봉고","파랑",	true, 1500);	  	
+
+		myCar.run();
+		yourCar.run();
+//		yourCar.convey();
+//		(Truck)yourCar.convey();
+		((Truck)yourCar).convey();
+		
+	}
+}

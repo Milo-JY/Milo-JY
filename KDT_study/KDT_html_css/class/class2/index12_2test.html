@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* hover는 마우스 커서를 요소에 올릴 때 부여한 속성 값으로 반응하게 함. */
+        h1:hover {
+            background-color: aqua;
+        }
+
+        /* not은 지정한 kt를 제외한 나머지 해당 태그들만 부여한 속성 값으로 반응하게 만듬. */
+        
+        form button:hover {
+            color: red;
+            background-color: lightcyan;
+        }
+        
+        form:hover label {
+            font-style: italic;
+            font-weight: bold;
+        } 
+        
+        /* :focus :
+            - 시각 장애인을 위한 서비스 중에 일부.
+            - TAB키 등으로 요소별 포커스를 맞춰주는 기능 부여 가능.
+        */
+        a:focus,
+        input:focus,
+        button:focus {
+            outline: none;
+            background-color: darkgrey;
+        }
+
+        /* :active :
+            링크 또는 버튼 누르면 스타일을 표시해주는 기능.        
+        */
+        a:active {
+            background-color: orange;
+        }
+
+        /* :visited :
+            링크를 통해 한번 접속 했던 것은 스타일 적용해서 표시해주는 기능.
+        */
+        a:visited {
+            color: red;
+        }
+
+        
+
+        ol li:not([id="kt"]) {
+            font-weight: bold;
+            font-size: 32px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>가상 클래스 선택자</h1>
+    <hr>
+
+    <ul>
+        <li id="naver"><a href="http://www.naver.com">네이버</a></li>
+        <li id="daum"><a href="http://www.daum.net">다음</a></li>
+        <li id="google"><a href="">구글</a></li>
+    </ul>
+    <hr>
+
+    <ol>
+        <li id="samsung"><a href="https://www.samsung.com">삼성</a></li>
+        <li id="lg"><a href="https://www.lge.co.kr">LG</a></li>
+        <li id="kt"><a href="https://www.kt.com">KT</a></li>
+        <li><a href="https://www.hyundai.com">현대자동차</a></li>
+        <li><a href="https://www.hanwha.co.kr">한화</a></li>
+    </ol>
+    <hr>
+
+    <form action="#">
+        <div>
+            <label for="name" class="fontStyle color">이름</label>
+            <input type="text" id="name" placeholder="이름을 입력하세요">
+        </div>
+
+        <div>
+            <label class="">주소</label>
+            <input type="text" id="adress" placeholder="주소를 입력하세요">
+        </div>
+
+        <div>
+            <label for="gender">남</label>
+            <input type="radio" name="gender" id="man" value="man">
+
+            <label for="gender">여</label>
+            <input type="radio" name="gender" id="woman" value="woman">
+        </div>
+
+        <button type="reset" disabled>초기화</button>
+        <button>전송</button>
+    </form>
+    <hr>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione minus quam consectetur dolores corrupti impedit adipisci ut corporis veniam ab cupiditate, deserunt nisi perferendis ipsum enim accusamus culpa odit. Reiciendis.
+        Ad cumque doloribus quo a alias aspernatur voluptates rerum ut hic pariatur obcaecati quasi harum esse accusamus fugiat perspiciatis itaque, sunt dolores beatae quia quisquam fuga odit molestiae. Sint, voluptatibus.
+        Delectus molestiae neque, repudiandae animi vero sunt, ipsa enim cum dolores iure fugit asperiores eaque vitae saepe ratione dicta beatae reprehenderit molestias? Dolore suscipit animi consequatur, ipsa pariatur laudantium sit.
+        Autem cupiditate repellendus voluptatum velit culpa, nam sequi reprehenderit delectus cumque quod aspernatur tenetur qui nisi vero in dolores voluptates maiores quae odit sed et explicabo a! Temporibus, voluptate eos?
+        Omnis eum alias a. Amet magnam nemo maiores natus cupiditate. Deserunt sed obcaecati ad cum voluptatem consequatur a expedita magni. Voluptatibus deserunt consequuntur a iusto tenetur quis reiciendis culpa amet?
+        Sint obcaecati consequatur eos, impedit eveniet blanditiis! Nobis iusto, modi est officia voluptas odio molestiae nesciunt fugit ipsum, nam repellat doloremque reprehenderit sunt eaque quisquam. Ipsam sunt omnis debitis minus!
+        Ullam magnam eligendi dolore provident cum amet earum, veniam natus deleniti facilis accusantium blanditiis voluptate quibusdam eum, quidem, officia odio voluptatum explicabo? Molestiae officiis explicabo eaque a, voluptatibus ipsum voluptates?
+        Doloremque accusamus obcaecati similique quia, porro eum eaque quas culpa! Earum commodi ea fugit! Omnis quibusdam eos ipsam molestiae facilis sunt recusandae perspiciatis doloribus eaque, aspernatur maxime quaerat assumenda dolorum.
+        Recusandae reprehenderit asperiores dignissimos accusamus excepturi doloribus neque ex vitae magnam tempore qui id quae illo quis impedit, vero molestiae in. Incidunt quas quo recusandae aperiam officiis cum numquam adipisci.
+        Iste nam error ullam nostrum qui assumenda quas consectetur rerum fuga quisquam dolorem quaerat natus porro, distinctio commodi perferendis quibusdam repellat aut optio quos deleniti eum hic laborum tenetur? Eum.
+    </p>
+
+    <a href="#title">제목으로</a>
+</body>
+
+</html>

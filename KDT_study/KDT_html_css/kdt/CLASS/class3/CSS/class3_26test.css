@@ -1,0 +1,45 @@
+p {
+    border: 1px solid blue;
+    width: 500px;
+}
+
+p:nth-of-type(1) {
+    text-align: left;
+}
+
+p:nth-of-type(2) {
+    text-align: right;
+}
+
+p:nth-of-type(3) {
+    text-align: center;
+}
+
+/* < text-align: justify >
+    : 문장을 배분 정렬(너비를 채우기 위해서 단어 간 간격을 강제로 맞춰서 너무 넓게 벌어지는 현상이 있음). 
+*/
+p:nth-of-type(4) {
+    text-align: justify;
+}
+
+
+/* < word-break: break-all > */
+p:nth-of-type(4):hover {
+    word-break: break-all;
+}
+
+/* 
+## 부첨 내용 ##
+< hyphens: auto; >
+    : break-all을 쓰지 않고, 단어를 강제로 개행시킬 때 하이픈(-)을 사용해 연결시켜줌.
+*/
+
+div {
+    background-color: bisque;
+    text-align: center;
+}
+
+div:hover p {
+    display: inline-block;
+    width: 200px;
+}

@@ -1,0 +1,28 @@
+package com.jjy.test;
+
+interface Animal{
+	void eat();
+	void sleep();
+}
+
+// 아래 Cow 클릭 또는 단축키 사용으로 자동 오버라이드 가능. (단축키 : 클래스명에 커서 올리고 "Ctrl + 1")
+class Cow implements Animal{
+
+	@Override
+	public void eat() {
+		System.out.println("우걱우걱");
+	}
+
+	@Override
+	public void sleep() {
+		System.out.println("쿨쿨");
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Cow so = new Cow();
+		so.eat();
+		so.sleep();
+	}
+}

@@ -1,0 +1,42 @@
+package com.jjy.test;
+
+class Car {
+	String name;
+	String color;
+	boolean gasoline;
+
+	Car(String name, String color, boolean gasoline) {
+		this.name = name;
+		this.color = color;
+		this.gasoline = gasoline;
+	}
+
+	void run() {
+		if (gasoline) {
+			System.out.println("부릉 부릉");
+		} else {
+			System.out.println("덜컹 덜컹");
+		}
+	}
+
+	void stop() {
+		System.out.println("끼이익");
+	}
+}
+
+class Truck extends Car { // 서브 클래스 형식 : "class 서브클래스명 extends 슈퍼클래스명"
+
+	int Ton; // 서브 클래스에서 추가 정의한 필드.
+
+	Truck(String name, String color, boolean gasoline, int ton) {
+		this(name, color, gasoline);
+		this.ton = ton;
+	}
+
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Truck poter = new Truck();
+	}
+}

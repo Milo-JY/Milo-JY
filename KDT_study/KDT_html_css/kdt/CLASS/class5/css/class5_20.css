@@ -1,0 +1,44 @@
+hr {
+    margin: 20px 0;
+}
+
+/* ============================================================================ */
+
+.grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+}
+
+.box1 {
+    background-color: cadetblue;
+
+    /* 
+        < grid-area 를 이용한 행열 교차 병합 형식 >
+
+        grid-area : grid-row-start / grid-column-start / grid-row-end / grid-column-end ;
+    */
+    grid-area: 1 / 1 / -1 / -1;
+    z-index: -2;
+}
+
+.box2 {
+    background-color: yellow;
+
+    grid-area: 1 / 2 / 3 / span 2;
+}
+
+.box3 {
+    background-color: dodgerblue;
+
+    grid-area: 2 / 1 / span 2 / span 2;
+}
+
+.box4 {
+    background-color: lightgreen;
+
+    grid-area: 2 / 2 / span 3 / span 3;
+    z-index: -1;
+}

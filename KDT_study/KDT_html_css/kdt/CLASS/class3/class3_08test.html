@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body>:not(h1):not(ul) {
+            color: gold;
+        }
+        /* 
+        body>:not(h1, ul) 보다  body>:not(h1):not(ul)을 사용해라.
+        */
+
+        li {
+            font-size: 20px;
+        }
+
+        ul:first-of-type li:first-child {
+            background-color: red;
+        }
+
+        ul:first-of-type li:nth-child(2) {
+            background-color: green;
+            opacity: 0.5;
+        }
+        /* 
+            opacity는 지정된 백그라운드 칼라 속성 뿐만 아니라, 글자의 투명도까지 적용된다.
+        */
+
+        ul:first-of-type li:last-child {
+            background-color: blue;
+            color: white;
+        }
+
+        ul:nth-of-type(2) li:first-child {
+            background-color: #f00;
+        }
+        /* 
+            16진수 값으로 
+        */
+
+        ul:nth-of-type(2) li:nth-child(2) {
+            background-color: green;
+        }
+
+        ul:nth-of-type(2) li:nth-child(3) {
+            background-color: blue;
+            color: white;
+        }
+
+        ul:nth-of-type(2) li:nth-child(4) {
+            background-color: black;
+            color: white;
+        }
+
+        ul:nth-of-type(2) li:last-child {
+            background-color: blue;
+            opacity: 0.6;
+            color: rgba(0 0 0 / 100%);
+        }
+
+        ul:first-of-type li:first-child {
+            color: #f00;
+        }
+
+        ul:nth-of-type(3) li:first-child {
+            color: rgb(224, 14, 14);
+        }
+
+        ul:nth-of-type(3) li:nth-child(2) {
+            color: green;
+        }
+
+        ul:nth-of-type(3) li:nth-child(3) {
+            color: blue;
+        }
+
+        ul:nth-of-type(3) li:last-child {
+            color: red;
+            opacity: 0.5;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>색상 지정</h1>
+    <hr>
+
+    <h2>1. 색상명 지정</h2>
+    <ul>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+    </ul>
+    <hr>
+
+    <h2>2. RGB 16진수 값 지정</h2>
+    <ul>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>black &amp; white</li>
+        <li>blue - opacity</li>
+    </ul>
+    <hr>
+
+    <h2>3. 함수형 RGB 값 지정</h2>
+    <ul>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Red - opacity</li>
+    </ul>
+    <hr>
+
+    <h2>4. 함수형 RGBA(Red Green Blue Alpha)</h2>
+    <ul>
+        <li>Red - opacity 100%</li>
+        <li>Red- opacity 70%</li>
+        <li>Red- opacity 30%</li>
+    </ul>
+</body>
+
+</html>

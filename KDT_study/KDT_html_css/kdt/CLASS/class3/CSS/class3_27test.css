@@ -1,0 +1,55 @@
+div {
+    border: blue solid 2px;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+}
+
+.vertical_baseline {
+    vertical-align: baseline;
+}
+
+div:nth-of-type(2)
+
+/* < bottom > */
+.vertical_bottom {
+    vertical-align: bottom;
+}
+
+/* < top > */
+.vertical_top {
+    vertical-align: top;
+}
+
+.vertical_middle {
+    vertical-align: middle;
+}
+
+.vertical_length {
+    vertical-align: 20px;
+}
+
+.vertical_percent {
+    vertical-align: 100%;
+}
+
+/*  */
+p {
+    border: blue solid 2px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    height: 200px;
+
+    text-align: center;
+    line-height: 200px;
+}
+
+/* 이미지 요소는  */
+
+p>img {
+    vertical-align: middle;
+}

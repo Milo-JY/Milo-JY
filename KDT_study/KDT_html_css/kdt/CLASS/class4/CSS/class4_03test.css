@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+}
+
+p {
+    display: inline-block;
+    text-align: justify;
+    word-break: break-all;
+    width: 300px;
+    height: 50px;
+    background: bisque;
+}
+
+
+/* 
+    요소의 너비 : 300 + padding(20*2) + border(20*2) = 380px
+    요소의 높이 : 50 + padding(20*2) + border(20*2) = 130px
+*/
+.box1 {
+    padding: 20px;
+    border: 20px solid red;
+    margin: 20px;
+}
+
+.box2 {
+    background: url(../IMG/pic4.jpeg) no-repeat center/100% 100%;
+    padding: 40px;
+    /* border: 20px solid #f000; */
+    outline: 10px solid black;
+    outline-offset: -10px;
+    margin: 20px;
+}
+
+
+.box3 {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* 요소 너비 : 300px, 높이 : 50xp*/
+.box4 {
+    margin: 20px;
+}
+
+.box5 {
+
+}

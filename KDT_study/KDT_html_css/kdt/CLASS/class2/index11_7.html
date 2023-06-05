@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        h1,h2 {
+            background-color: lightgray;
+            color: lightsalmon;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        h1 {
+            font-size: 50px;
+        }
+
+        h2+ul>li>ul>li>ol>li+li {
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        li {
+            font-size: 20px;
+        }
+
+        ul {
+            background-color: beige;
+        }
+
+        h2+ul * {
+            color: blue;
+        }
+
+        h2+ul>li * {
+            color: deeppink;
+        }
+
+        h2+ul>li>ul>li * {
+            color: green;
+        }
+
+        div *{
+            background-color: lightgreen;
+        }
+
+        div>ul * {
+            color: red;
+        }
+
+
+        div>ul>li+li {
+            color: yellow;
+        }
+
+    </style>
+</head>
+<!-- 
+  < 지시사항 >
+
+1. 본문을 참조하여 적절한 그룹 지정.
+
+2. 텍스트 크기.
+- h1 : 50px
+- h2, 리스트 텍스트("디젤") : 30px
+- 리스트 : 20px
+
+3. 리스트 텍스트("디젤") : 언더라인 지정.
+
+4. class 식별자는 ul 에만 지정.
+   ( 식별자는 최대 2개로 제한)
+
+5. 텍스트와 배경 색상 지정 및 정렬은 구현 페이지 참조.
+
+ -->
+
+<body>
+    <h1>중고차</h1>
+    <hr>
+
+    <h2>2021년식</h2>
+
+    <ul>
+        <li>세단
+            <ul>
+                <li>소나타</li>
+                <li>아반떼</li>
+                <li>K7
+                    <ol>
+                        <li>가솔린</li>
+                        <li>디젤</li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+        <li>SUV</li>
+        <li>트럭</li>
+        <li>봉고</li>
+    </ul>
+
+    <hr>
+
+    <h2>2020년식</h2>
+
+    <div>
+        <ul>
+            <li>세단</li>
+            <li>SUV
+                <ul>
+                    <li>산타페</li>
+                    <li>쏘렌토
+                        <ol>
+                            <li>가솔린</li>
+                            <li>디젤</li>
+                        </ol>
+                    </li>
+                    <li>셀토스</li>
+                </ul>
+            </li>
+            <li>트럭</li>
+            <li>봉고</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

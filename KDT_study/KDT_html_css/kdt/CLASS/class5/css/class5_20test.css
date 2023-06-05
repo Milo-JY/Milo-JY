@@ -1,0 +1,12 @@
+hr {
+    margin: 20px 0;
+}
+
+.grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+}
+

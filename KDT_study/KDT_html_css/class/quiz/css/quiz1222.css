@@ -1,0 +1,136 @@
+
+
+* {
+    margin: 0;
+}
+
+
+.container {
+    width: 5vh;
+    height: 5vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+
+    /* z-index: 5; */
+}
+
+.box {
+    width: calc(100% * 5);
+    height: calc(100% * 5);
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: calc(5vh * 5);
+    position: absolute;
+}
+
+.top {
+    background-color: blue;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left {
+    background-color: lawngreen;
+    right: 0;
+    z-index: -1;
+}
+
+.right {
+    background-color: fuchsia;
+}
+
+.top:hover {
+    z-index: 1;
+}
+
+.left:hover {
+    z-index: 1;
+}
+
+.right:hover {
+    z-index: -2;
+}
+
+
+/* 
+1.fixed / absolute 
+2.container 박스는 사각형들 보다 작은 크기로
+2.수직에만 반응
+3.텍스트 안삐져나오게
+4.html순서 : 상단1 왼쪽2 오른쪽3
+5.z축 확인 :왼쪽 ^ 상단 ^ 오른쪽
+6.상단호버하면 상단이 제일 위로
+왼쪽 호버시 제일 위로
+오른쪽 호버 시 제일 바닥으로
+*/
+
+/* ===================================== */
+/* 강사님 답 */
+
+/* * {
+    margin: 0;
+}
+
+.container {
+    width: 5vh;
+    height: 5vh;
+
+    position: fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
+    background-color: yellow;
+}
+
+.box {
+    width: calc(100% * 5);
+    height: calc(100% * 5);
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    line-height: calc(5vh * 5);
+    overflow: hidden;
+    position: absolute;
+} */
+
+/* ====================================================== */
+
+/* .b1 {
+    background-color: blue;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.b2 {
+    background-color: chartreuse;
+    color: black;
+    right: 0;
+    z-index: -1;
+}
+
+.b3 {
+    background-color: deeppink;
+} */
+
+/* ====================================================== */
+
+/* .b1:hover {
+    z-index: 1;
+}
+
+.b2:hover {
+    z-index: 1;
+}
+
+.b3:hover {
+    z-index: -2;
+} */

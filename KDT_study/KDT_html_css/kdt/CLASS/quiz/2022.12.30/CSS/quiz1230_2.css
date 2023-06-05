@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+}
+
+.logo {
+    background-color: blueviolet;
+}
+
+.menu {
+    background-color: yellowgreen;
+}
+
+.contents {
+    background-color: coral;
+}
+
+.aside {
+    background-color: cadetblue;
+}
+
+.footer {
+    background-color: deeppink;
+}
+
+#grid_container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#grid_container {
+    display: grid;
+    height: 100vh;
+
+    grid-template: 1fr 3fr 1fr / repeat(2, 1fr) repeat(2, 0.5fr);
+
+    grid-template-areas: 
+    "a b . ."
+    "c c d d"
+    ". e e ."
+
+}
+
+.logo {
+    grid-area: a;
+}
+
+.menu {
+    grid-area: b;
+}
+
+.contents {
+    grid-area: c;
+}
+
+.aside {
+    grid-area: d;
+}
+
+.footer {
+    grid-area: e;
+}

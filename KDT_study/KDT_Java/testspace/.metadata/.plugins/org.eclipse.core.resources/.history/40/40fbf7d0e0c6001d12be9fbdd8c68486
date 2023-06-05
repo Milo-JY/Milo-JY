@@ -1,0 +1,68 @@
+package com.jjy.test;
+
+/*
+ * < 인터페이스의 활용과 목적 >
+ * 
+ * 인터페이스 또한 추상클래스와 마찬가지로 타입 확장을 통해 슈퍼타입 인터페이스 변수에 대한 서브 구현 객체의 메서드 호출이 가능.
+ * 
+ * 즉, 슈퍼타입 인터페이스 변수로 서브 타입 객체를 가리킨 경우, 생성된 객체의 구현된 메서드를 호출하는 정적 바인딩이 진행됨에 따라 임의의
+ * 객체 생성 시 인터페이스를 다중 상속 받은 경우 각각의 인터페이스 (슈퍼)타입으로 구현된 메서드를 호출함으로써 인터페이스 타입에 따른 객체
+ * 의 멤버 사용을 통합 및 선별 가능.
+ * 
+ * 또한 개별 객체에 대한 공통적인 기능에 대하여 그 세부적 내용만 차이가 있는 경우 인터페이스를 통해 다수의 서브 클래스에 상이한 내용만 구현
+ * 함으로써 각각의 객체를 공통 인터페이스 (슈퍼)타입 변수로 받아 개별 객체의 상이한 메서드 내용을 자동 선별이 가능케 함으로써 다형성 확보.
+ * 
+ * 결국 인터페이스의 목적은 세부적인 면에서 객체의 기능 통합을 통한 선별 사용과 다형성 확보로 구분되며, 큰 틀에서는 타입의 확장을 통한 객체의
+ * 부품화 및 제한적 다중상속의 실현. 
+*/
+interface Animal{		
+	void eat();			
+	void sleep();		
+}						
+
+abstract class Dog{
+	void swingTail() {
+		System.out.println("살랑살랑");
+	}
+	
+	abstract void bark();
+}
+
+class Chihuahua extends Dog implements Animal{			// 구현 클래스 정의 - < 서브클래스명 implements 인터페이스명 >
+
+	@Override
+	void bark() {
+		System.out.println("왈왈");
+	}
+	
+	@Override
+	public void eat() {					
+		System.out.println("우걱우걱");	
+	}
+
+	@Override
+	public void sleep() {
+		System.out.println("쿨쿨");
+	}
+
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Chihuahua happy = new Chihuahua();
+		
+		happy.swingTail();
+		happy.bark();
+		happy.eat();
+		happy.sleep();
+		System.out.println();
+		
+		Animal animal = new Chihuahua();
+		
+		animal.eat();
+		animal.sleep();
+//		animal.bark(); // 컴파일 에러! 아래와 같이 캐스팅 필요!
+		((Chihuahua)animal).bark();  
+		
+	}
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/Users/luscious88/Desktop/coding/academy/Java/testspace/.metadata/.plugins/org.eclipse.jdt.core
+2089348824.index
+1865797976.index

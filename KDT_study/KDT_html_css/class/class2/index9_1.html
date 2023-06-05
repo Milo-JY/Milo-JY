@@ -1,0 +1,63 @@
+<!--
+    < CSS(Cascading Style Sheet) >
+
+- 스타일을 미리 정의하여 필요할 때 호출함으로써 코드의 유지보수와 웹 페이지 로딩 속도 향상.
+  또한 캐스캐이딩이란 단어의 뜻과 같이 상위 태그에 지정된 속성이 하위 태그에도 연쇄적으로
+  적용되는 상속 특성을 가짐. 단, 부모 태그로부터 상속된 속성이더라도 하위 태그에서 동일한
+  속성을 적용 시에는 하위 태그에 적용된 속성 값으로 수렴되어 적용.
+  단, font-size 속성에 대한 % 비율 적용 시에는 부모와 자식 요소가 동시에 % 비율을 지정할 때
+  자식 요소의 비율로만 수렴되는 것이 아닌, 부모 요소와 자식 요소의 비율이 연쇄 적용되어 부모
+  요소의 비율에 다시 자식 요소의 비율이 연쇄 적용됨에 주의.
+
+================================================================================================
+
+    < 인라인(Inline) 스타일 시트 >
+
+- 개별 태그에 스타일을 지정하는 방식으로 style 속성 내에 내부 속성과 값을 콜론(:)으로 구분하여
+  표기하되 다른 내부 속성과 구분하기 위한 구분자로 세미콜론(;) 표기. style 속성의 내부 속성이나
+  값은 반드시 쌍따옴표("") 내에 작성해야 함에 유의.
+  인라인 스타일은 현재의 웹 표준에 부합하지 않는 방식으로 테스트 목적으로만 사용.
+
+  형식    :   style = "속성명:값; 속성명:값; ..."
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>인라인 스타일 시트</title>
+ </head>
+ 
+ <!-- 
+      font-size 속성은 디폴트 단위가 픽셀(px)로 지정되어 접미사 "px" 생략 가능.
+      font-size 속성 생략 시에는 디폴트 16px 적용. 
+  -->
+ 
+ <body style="color:#ff00ff; text-align:center; font-size:16px">
+     <p>Inline Style Sheet</p>
+ 
+     <hr>
+ 
+     <ol style="color:green; text-align:left;">
+         <li>목록</li>
+         <li>목록</li>
+         <li>목록</li>
+         <li>목록</li>
+     </ol>
+ 
+     <hr>
+ 
+     <!-- 
+          div 요소의 컨텐트는 부모 요소(body)의 font-size 16px 에 대한 2배 비율이 되는 32px 적용.
+       -->
+     <div style="font-size:200%;">div 폰트사이즈
+ 
+         <!-- 
+              p 요소의 컨텐트는 부모(div)의 다시 0.5배의 비율이 적용되므로 16px 적용.
+           -->
+         <p style="font-size:50%">문단 폰트사이즈</p>
+     </div>
+ </body>

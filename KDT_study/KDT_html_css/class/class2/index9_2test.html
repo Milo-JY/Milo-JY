@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 스타일 시트</title>
+
+</head>
+
+<!--
+    인라인 스타일 시트를 body에 먹이면 그 아래 종속 되는 태그들은 기본적으로 해당 스타일이 적용된다.
+    하지만, 아래 종속 되는 시트에 인라인 스타일 시트를 부여하면 종속 관계 중 가장 가까운 스타일을 적용한다.
+-->
+<body style="color:#ff00ff; text-align:center; font: size 16px;">
+    <p>Inline style sheet</p>
+    <hr>
+
+    <ol style="color: green; text-align:left;">
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ol>
+    <hr>
+
+    <div style="font-size: 200%;">div 폰트사이즈
+        <p style="font-size: 50% ;">문단 폰트사이즈</p>
+    </div>
+    <!-- font-size는 종속에 2중 부여 시 %가 누적되어 -->
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+h1 {
+    text-align: center;
+}
+
+.imgContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+h1,
+.imgContainer,
+.imgContainer img {
+    transition: all .2s .2s;
+    /* transition: property duration delay */
+    /* - duration 빼고 다 생략 가능
+       - transition: opacity .5s ease-out, width .7s ease-out; */
+}
+
+/* ============================================= */
+/* 뷰포트 너비 512px 이하 구현 */
+
+h1 {
+    font-size: 1em;
+}
+
+.imgContainer {
+    width: 12.25em;
+    height: 12.25em;
+}
+
+.imgContainer img {
+    width: 50%;
+    height: 50%;
+}
+
+
+/* 뷰포트 너비 512px 이상, 832px 이하, 구현 */
+@media screen and (min-width:32em) and (max-width:52em) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .imgContainer {
+        width: 25em;
+        height: 25em;
+    }
+
+    .imgContainer img {
+        width: 50%;
+        height: 50%;
+    }
+    
+}
+
+@media screen and (min-width:52em) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .imgContainer { 
+        flex-wrap: nowrap;
+        width: 50em;
+        height: 12.5em;
+    }
+
+    .imgContainer img {
+        width: 25%;
+        height: 100%;
+    }
+}

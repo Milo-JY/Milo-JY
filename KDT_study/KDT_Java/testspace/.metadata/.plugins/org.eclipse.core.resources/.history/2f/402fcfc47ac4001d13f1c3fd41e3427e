@@ -1,0 +1,97 @@
+package com.jjy.test;
+
+class TankTier {
+	String tier;
+	String tankName;
+	int cannon;
+	boolean missile;
+	boolean nuclear;
+
+	public TankTier(String tier, String tankName, int cannon) {
+		this.tier = tier;
+		this.tankName = tankName;
+		this.cannon = cannon;
+	}
+
+	public void tankInfo() {
+		System.out.printf("%s\n", tier);
+		System.out.printf("탱크명 : %s\n", tankName);
+		System.out.printf("대포 : %d\n", cannon);
+	}
+
+	public void printTankName() {
+		System.out.printf("\n\n< %s 공격 >\n", tankName);
+	}
+
+	public void attackCannon() {
+		String boom = null;
+
+		switch (cannon) {
+		case 1:
+			boom = "펑";
+			break;
+		case 2:
+			boom = "펑펑";
+			break;
+		case 3:
+			boom = "콰쾅";
+			break;
+		}
+
+		System.out.printf("대포발사 : %s\n", boom);
+	}
+
+	public void attackMissile() {
+		System.out.println("미사일 발사 : 초전박살");
+	}
+
+	public void attackNuclear() {
+		System.out.println("핵미사일 발사 : 지구멸망");
+	}
+
+	public void fireCannon() {
+		printTankName();
+	      attackCannon();
+	}
+
+	   public void fireMissile() {
+	      if (missile) {
+	         printTankName();
+	         attackMissile();
+	      }
+	   }
+	   
+	   public void fireNuclear() {
+	      if(tankTier.nuclear) {
+	         printTankName();
+	         attackNuclear();
+	      }
+	   }
+}
+
+class Tier1 extends TankTier { 
+	boolean missile;
+	boolean nuclear;
+	
+	public Tier1 (String tier, String tankName, int cannon, boolean missile, boolean nuclear) {
+		TankTier(tier, tankName, cannon);
+		this.missile = missile;
+		this.nuclear = nuclear;
+	}
+}
+
+//class Tier2 extends TankTier { 
+//	
+//}
+//
+//class Tier3 extends TankTier { 
+//	
+//}
+
+public class Main {
+	public static void main(String[] args) {
+		Tier1 k1 = new Tier1();
+		
+		k1.tier
+	}
+}

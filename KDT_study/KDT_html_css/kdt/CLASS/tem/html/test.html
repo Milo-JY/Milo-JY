@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그와 submit</title>
+</head>
+
+<body>
+    <form action="./server.html" name="studentInfo"></form>
+        <div>
+            <label for="named">이름 :</label>
+            <input type="text" id="named" name="named" minlength="3" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="stNum">이름 :</label>
+            <input type="text" id="stNum" name="stNum" placeholder="2자리 이상 입력하세요." minlength="2" maxlength="3" required>
+        </div>    
+
+        <input type="submit" name="transBtn" value="전송">
+    <!--  -->
+
+</body>
+
+</html>

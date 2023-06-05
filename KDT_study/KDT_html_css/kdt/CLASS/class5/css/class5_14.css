@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+}
+
+.box1 {
+    background-color: brown;
+}
+
+.box2 {
+    background-color: blueviolet;
+}
+
+.box3 {
+    background-color: blue;
+}
+
+.box4 {
+    background-color: red;
+}
+
+.box5 {
+    background-color: green;
+}
+
+.box6 {
+    background-color: yellowgreen;
+}
+
+.box7 {
+    background-color: black;
+}
+
+.box8 {
+    background-color: coral;
+}
+
+.box9 {
+    background-color: cadetblue;
+}
+
+.box10 {
+    background-color: deeppink;
+}
+
+h2,
+hr {
+    margin: 20px 0;
+}
+
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/* ============================================================================ */
+/* 1. repeat 함수 */
+
+.container1 {
+    grid-template: 50px 50px / 200px 200px 200px 200px 200px;
+}
+
+.container2 {
+
+    /* 
+        < repeat 함수 >
+
+    - repeat 함수를 통해 연속적이고 반복적인 값을 축약.
+
+
+    형식    :    repeat( 반복할 행 또는 열의 횟수, 반복할 행 또는 열의 크기 )
+
+    */
+    grid-template: repeat(2, 100px) repeat(3, 50px) / repeat(2, 300px);
+}
+
+/* ============================================================================ */
+/* 2. fr(Fraction) */
+
+.container3 {
+
+    /* 
+        < fr(Fraction) >                                                              - fraction : 부분
+
+    - Grid 레이아웃에서 아이템들의 행 또는 열방향에 대한 상대적 비율 단위.
+    */
+    grid-template: repeat(2, 50px) / 3fr repeat(3, 1fr) 2fr;
+}

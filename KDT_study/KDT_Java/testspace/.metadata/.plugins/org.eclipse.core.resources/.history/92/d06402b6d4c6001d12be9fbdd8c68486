@@ -1,0 +1,46 @@
+package com.jjy.test;
+
+
+
+interface Animal{		
+	void eat();			
+	void sleep();		
+}						
+
+abstract class Dog{
+	void swingTail() {
+		System.out.println("살랑살랑");
+	}
+	
+	abstract void bark();
+}
+
+class Chihuahua extends Dog implements Animal{			// 구현 클래스 정의 - < 서브클래스명 implements 인터페이스명 >
+
+	@Override
+	void bark() {
+		System.out.println("왈왈");
+	}
+	
+	@Override
+	public void eat() {					
+		System.out.println("우걱우걱");	
+	}
+
+	@Override
+	public void sleep() {
+		System.out.println("쿨쿨");
+	}
+
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Chihuahua happy = new Chihuahua();
+		
+		happy.swingTail();
+		happy.bark();
+		happy.eat();
+		happy.sleep();
+	}
+}

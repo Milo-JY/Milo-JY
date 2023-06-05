@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    display: inline-block;
+    width: 700px;
+    height: 150px;
+    background-color: bisque;
+    text-align: center;
+    margin: auto;
+}
+
+/* ====================================== */
+
+
+.leftBox,
+.rightBox {
+    background-color: burlywood;
+}
+
+.container ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50px;
+    line-height: 46px;
+    /* border 값 1px은 컨테츠 영역에 차지하기 때문에 line-height에서 2px(위 아래 1px씩)을 빼고 잡아준다. */
+    background-color: lightskyblue;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+/* ===================================== */
+/* leftBox */
+
+.leftBox {
+    float: left;
+    width: 115px;
+    height: 115px;
+    margin: calc((150px - 115px)/2);
+}
+.container ul {
+    display: inline-block;
+}
+
+.rightBox {
+    width: 225px;
+    height: 60px;
+    margin: calc((150px - 115px)/2);
+    float: right;
+    margin-top: calc(60px + (150px - 115px)/2);
+}
+
+
+

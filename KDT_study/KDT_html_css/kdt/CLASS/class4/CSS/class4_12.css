@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main,
+footer {
+    width: calc(1024px * .8);
+    margin: auto;
+    text-align: center;
+}
+
+header,
+footer {
+    line-height: 20vh;
+    background-color: antiquewhite;
+}
+
+/* ================================================= */
+/* main */
+
+main {
+    height: 60vh;
+}
+
+#section_article {
+    width: 70%;
+    float: left;
+}
+
+#section_article section {
+    line-height: calc(60vh * .6);
+    background-color: silver;
+}
+
+#section_article article {
+    line-height: calc(60vh * .4);
+    background-color: cadetblue;
+}
+
+main aside {
+    width: 30%;
+    line-height: 60vh;
+    background-color: burlywood;
+
+    /* float: left; */
+    /* float: right; */
+    /* display: inline-block; */
+    /* width: 100%; */
+    /* width: auto; */
+}

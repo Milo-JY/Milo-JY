@@ -1,0 +1,106 @@
+/* <!-- 
+< 문제 >
+
+- 화면구현 예시와 같이 시멘틱 구조를 이용하여 네비게이션 메뉴를 구현하라.
+
+
+< 메뉴 항목 >
+
+Design -> Overview, smart, Design Insights, Studios
+Innovation -> Overview, Charging & Services, Plug-in-Hybrid
+Sports -> Overview, Motorsports, Golf, Laureus, Esports
+Event -> Driving Events, Classic Car Travel
+
+
+< 본문 내용 >
+
+Do Lorem in anim dolor culpa minim enim ex elit laborum laboris mollit officia magna. Id fugiat laboris dolor
+exercitation. Magna dolor aliquip sit fugiat aute nostrud reprehenderit exercitation eu aliquip. Ea labore anim
+reprehenderit quis et laboris excepteur ex sint voluptate. Non et irure sunt id consequat deserunt aliquip commodo dolor
+nostrud velit. Non do ea irure sunt. Dolore labore ad ad ut anim pariatur. Do nisi qui laborum consectetur velit qui
+dolor non amet. Magna ex
+cillum minim consectetur velit veniam. Reprehenderit aliqua consequat duis voluptate et veniam. Cillum aute et
+exercitation ea ut aliquip excepteur. Eiusmod aliquip ad culpa ullamco quis occaecat ex non. Et consequat incididunt
+incididunt occaecat in. Reprehenderit aute eiusmod aliquip proident culpa pariatur sit mollit deserunt est dolor nulla
+deserunt. Cillum labore esse irure magna labore ullamco occaecat proident. Tempor culpa ea anim mollit cupidatat elit
+labore quis commodo cupidatat et culpa velit eiusmod. */
+
+    /* < 조건 >
+
+1) 메뉴와 본문은 화면 중앙에 배치되도록 구현.
+
+2) 메뉴와 본문의 너비는 600px.
+
+3) 메뉴의 배경 색상은 li 요소가 아닌 ul 요소에 지정.
+
+4) 상단 고정 메뉴는 float 을 활용하여 배치.
+
+5) 메뉴는 header 와 nav 구조에 구성.
+
+6) ul 요소에는 높이 지정 불가.
+
+--> */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header, main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================= */
+
+.container{
+    width: 600px;
+    background-color: teal;
+    color: white;
+    /* display: inline-block; */
+    /* float: left; */
+    margin-bottom: 20px;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+/* 888888888888888 */
+.container>li {
+    width: 25%;
+    line-height: 40px;
+    float: left;    
+    box-sizing: border-box;
+    /* 너비를 맞춰놓은 상황에서 요소 안의 텍스트를 안쪽으로 맞추기 위해서 패딩을 넣는데, 그냥 넣으면 요소 박스 외부로 부여되서 구조를 망친다. 그래서 border-box를 설정 해서 요소 내부로 패딩이 부여되게 만들어 주고 */
+    padding: 0 30px;
+    position: relative;
+}
+
+/* 자식 요소에 absolute를 부여하고 나면 부모 요소에 relative를 부여해 자식 요소의 속성 부여 종속 기준을 만들어 줘야 한다.*/
+.subContainer {
+    width: calc(600px * .25);
+    background-color: cadetblue;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.subContainer>li {
+    padding: 0 30px;
+}
+
+.container>li:hover>ul {
+    display: block;
+}
+
+/* ============================================== */
+
+main {
+    text-align: justify;
+}
+
+/* =============================================== */
+

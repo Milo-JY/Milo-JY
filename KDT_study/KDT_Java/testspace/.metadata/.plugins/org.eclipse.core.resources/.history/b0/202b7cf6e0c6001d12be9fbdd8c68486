@@ -1,0 +1,60 @@
+package com.jjy.test;
+
+/*
+ *	< 다중구현 인터페이스를 통한 객체의 기능 통합 및 선별 >
+ *
+ * 	다수의 인터페이스로부터 다중상속을 받아 단일 구현 클래스에서 모든 구현을 함으로써 기능을 통합하고
+ * 
+ * 	객체 생성 시 각각의 인터페이스 타입 변수로 개별 구현 객체를 가리킴으로써 통합된 기능의 선별 사용 가능.
+*/
+
+interface Func1 {		
+	void func1_1();			
+	void func1_2();			
+}						
+
+interface Func2 {		
+	void func2_1();			
+	void func2_2();			
+}						
+
+class ImpleClass implements Func1, Func2 {		// 클래스에 다중구현 인터페이스 적용.
+
+	@Override
+	public void func2_1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void func2_2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void func1_1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void func1_2() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+
+public class Main {
+	public static void main(String[] args) {
+		Func1 t1 = new ImpleClass(); 
+		Func2 t2 = new ImpleClass(); 
+		
+		t1.func1_1();
+		t1.func1_2();
+		
+		
+	}
+}

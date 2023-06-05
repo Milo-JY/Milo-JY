@@ -1,0 +1,89 @@
+/* 
+.container {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    width: 430px;
+}
+
+.container div {
+    background-color: blue;
+    width: 100px;
+    line-height: 100px;
+    float: left;
+}
+
+.container>div:not(div:nth-of-type(n+13)){
+    margin-bottom: 10px;
+}
+
+.container>div:not(div:nth-of-type(4n+1)){
+    margin-left: 10px;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear: left;
+} */
+
+/* ============민수================ */
+
+.container {
+    text-align: center;
+    width: 430px;
+    background-color: brown;
+}
+
+.container>div {
+    float: left;
+    width: 100px;
+    line-height: 100px;
+    background-color: blue;
+    color: white;
+}
+
+.container>div:not(.container>div:nth-of-type(-n+4)) {
+    margin-top: 10px;
+}
+
+.container>div:not(.container>div:nth-of-type(4n)) {
+    margin-right: 10px;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear:left;
+}
+
+/* =================강사님============= */
+
+.container {
+    background-color: deeppink;
+    width: 430px;
+}
+
+.container div {
+    width: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: blue;
+    color: aquamarine;
+
+    float: left;
+}
+
+.container div:nth-child(-n + 12) {
+    margin-bottom: 10px;
+}
+
+.container div:not(:nth-child(4n)) {
+    margin-right: 10px;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear: left;
+}

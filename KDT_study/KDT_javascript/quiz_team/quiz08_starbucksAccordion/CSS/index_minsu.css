@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background-color: bisque;
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+}
+
+body section {
+    width: 50%;
+
+    font-size: 20px;
+}
+
+.logo_page  {
+    font-size: 25px;
+}
+
+.logo_page p {
+    padding-top: 30px;
+}
+
+.logo_page img{
+    display: inline-block;
+    width: 100%;
+}
+
+.service_header {
+    background-color: darkslategray;
+    color: white;
+
+    line-height: 50px;
+    padding-left: 10px;
+
+    cursor: pointer;
+}
+
+.service_body {
+    background-color:rgba(121, 160, 121, 0.81);
+    height: 180px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.service_list {
+    margin: 10px 0;
+}
+
+.hidden .service_body {
+    height: 0px;
+}
+
+.btn_collapseAll {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    padding: 5px;
+    color: blue;
+}

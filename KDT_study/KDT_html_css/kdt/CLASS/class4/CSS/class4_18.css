@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.outer {
+    background-color: antiquewhite;
+    width: 500px;
+    height: 500px;
+    border: solid 1px;
+}
+
+.inner {
+    background-color: silver;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+
+}
+
+.inner div {
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+
+    /* 
+        <요약>
+
+    - 키워드 : 본래 위치가 기준 / 크기 결정요소는 부모요소
+    - 내용 : 크기를 변경하면 같은 요소들 간에 겹치지 않고 늘린 크기만큼 자리를 차지한다.
+
+        구분      | 컨테이닝 블럭  | 마진 기준 |  부모요소  | 
+        _________________________________________________________ 
+        fixed    |  화면 뷰포트   |   뷰포트  | 가장가까운 |
+        relative |  페이지 뷰포트 |  자기자신 |    동일    |
+        absolute |  페이지 뷰포트 |   뷰포트  |    동일    |
+    */
+
+
+    /* 
+        < relative 요소의 컨테이닝 블럭 >
+
+    1) 위치에 대한 컨테이닝 블럭
+    
+    - relative 요소 자신의 본래 위치가 항상 기준.
+
+    2) 크기에 대한 컨테이닝 블럭
+
+    - static 요소와 동일하게 무조건 가장 가까운 부모요소가
+      크기를 결정짓는 컨테이닝 블럭으로 인정.
+    */
+    position: relative;
+}
+
+.child1 {
+    top:-50px;
+}
+
+.child2 {
+    right: 50px;
+}
+
+.child3 {
+    bottom:50px;
+}
+
+/* ================================================================================ */
+
+.child4 {
+    top:-50px;
+}
+
+.child5 {
+    right: 50px;
+}
+
+.child6 {
+    bottom:50px;
+}
+
+.box2 div div {
+    width: 50%;
+    height: 50%;
+}

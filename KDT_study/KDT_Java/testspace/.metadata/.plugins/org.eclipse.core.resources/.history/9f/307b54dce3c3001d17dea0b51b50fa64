@@ -1,0 +1,44 @@
+package com.jjy.test;
+
+class Storage {
+	private int[] storage;
+	private int top = -1;
+	private int bot;
+
+	public Storage(int size) {
+		storage  = new int[size];
+		bot = size - 1;
+	}
+	
+	private void printout(int[] target) {
+		for(int t : target) System.out.printf("%d", t);
+	}
+	
+	public void store(int... a) {
+		
+	}
+	
+	public void drop(int... a) {
+	
+		
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Storage first = new Storage(10);
+
+//		first.store(5, 1);
+		first.store(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+		first.store(9, 7);
+		first.store(2, 2, 9);
+		first.drop(2, 9);
+		first.store(3, 5, 5, 9);
+		first.store(8, 9, 4);
+		first.store(1, 2, 3, 4);
+//		first.drop(1);
+		first.drop(3, 4);
+		first.drop(3, 4, 6);
+//		first.drop(5, 8);
+	}
+}

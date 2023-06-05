@@ -1,0 +1,19 @@
+package com.jjy.test;
+
+public class Main {
+	static int firstNum = 0;
+	
+	public static void main(String[] args) {
+		int secondNum=1;
+		
+		class Car{
+			void printCarNum() {
+				System.out.println("차량번호 : " + firstNum + secondNum);
+			}
+		}
+		
+		Car avante=new Car();
+		
+		avante.printCarNum();
+	}
+}

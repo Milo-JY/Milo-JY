@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>caption 태그와 Table 그룹화</title>
+</head>
+
+<body>
+    <!--
+        < caption 태그 >
+
+    - 테이블의 설명이나 제목을 표현함으로써 검색 품질지수을 상향.
+      단, caption 태그는 테이블 태그의 가장 최초의 자식 요소가 되어야 함에 주의.
+    
+    =======================================================================================
+
+        < Table 그룹화 태그 >
+
+    - thead, tbody, tfoot 등의 테이블 그룹화 태그를 통해 테이블의 항목 부분, 데이터 부분,
+      통계 부분등을 그룹화하여 구분함으로써 검색 효율을 증대.
+    
+    - thead : 테이블의 필드(항목) 부분에 대한 그룹화.
+    - tbody : 테이블의 레코드(행값) 부분에 대한 그룹화.
+    - tfoot : 테이블의 말단 부분에 대한 그룹화.
+
+    -->
+    <table border="1">
+        <caption>테이블 구조</caption>
+
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th scope="col">항목1</th>
+                <th scope="col">항목2</th>
+                <th scope="col">항목3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">a</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+
+            <tr>
+                <th scope="row">b</th>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+
+            <tr>
+                <th scope="row">c</th>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+
+            <tr>
+                <th scope="row">d</th>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">총계</th>
+                <td>22</td>
+                <td>26</td>
+                <td>30</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

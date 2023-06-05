@@ -1,0 +1,81 @@
+p {
+    border: 1px solid blue;
+}
+
+/* 
+    < letter-spacing >
+
+- 글자사이 간격(자간) 설정.
+*/
+h2:nth-of-type(1):hover+p {
+    letter-spacing: 5px;
+}
+
+/* 
+    < word-spacing >
+
+- 단어사이 간격(자간) 설정.
+*/
+h2:nth-of-type(2):hover+p {
+    word-spacing: 5px;
+}
+
+h2:nth-of-type(3)+p {
+    height: 150px;
+}
+
+/* 
+    < line-height >
+
+- 글자의 중심선(Middle line)을 기준으로 한 top 부터 bottom 까지의 전체 높이.
+  글자의 중심선으로 부터 top 이나 bottom 까지의 개별 높이가 아님에 주의.
+  또한 line-height 의 지정은 자식 요소가 아닌 부모요소에 지정함으로써
+  부모요소 안에서의 자식요소에 대한 요소의 높이가 결정됨에 주의.
+
+# 5-3-8_인라인요소에_대한_vertical-align.JPG    -  파일 참조.
+*/
+h2:nth-of-type(3):hover+p {
+    line-height: 50px;
+}
+
+h2:nth-of-type(n+4)+p {
+    width: 500px;
+    height: 100px;
+}
+
+h2:nth-of-type(4):hover+p {
+    text-align: center;
+    line-height: 100px;
+}
+
+h2:nth-of-type(5):hover+p {
+    text-align: center;
+    line-height: 50px;
+}
+
+div {
+    text-align: center;
+    line-height: 100px;
+}
+/* 
+    < line-height % 예외 >
+
+- line-height 에 대한 % 적용은 상위 부모 요소에 적용된 누적 백분율이
+  아닌 해당 요소의 font-size 크기에 대한 백분율이 적용됨에 주의.
+  따라서 아래에서의 line-height 200% 는 기본 16px 이 가지는 line-height
+  에 대한 200% 가 지정.
+*/
+h2:nth-of-type(6)+div p {
+    text-align: center;
+    /* line-height: 200%; */
+}
+
+/* 
+    < line-height - normal >
+
+- line-height 또한 계층 내 상속이 이루어지며 normal 적용시 해당 요소가
+  가지는 font-size 크기에 적용되는 디폴트 line-height 값이 적용.
+*/
+h2:nth-of-type(7)+div:hover p {
+    line-height: normal;
+}

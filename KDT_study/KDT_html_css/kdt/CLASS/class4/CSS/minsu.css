@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+}
+
+body>div {
+    top: calc((100vh - 20vh)/2);
+    left: calc((100vw - 20vh)/2);
+    width: 0;
+    height: 0;
+    position: fixed;
+}
+
+.square {
+    position: absolute;
+    text-align: center;
+    width: 20vh;
+    line-height: 20vh;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.square.top {
+    top: -8vh;
+    z-index: 2;
+    background-color: blue;
+}
+
+.square.left {
+    top: 8vh;
+    left: -8vh;
+    z-index: 1;
+    background-color: chartreuse;
+    color: black;
+}
+
+.square.right {
+    top: 8vh;
+    left: 8vh;
+    z-index: 3;
+    background-color:darkorchid
+}
+
+.square.top:hover {
+    z-index: 4;
+}
+
+.square.left:hover {
+    z-index: 4;
+}
+
+.square.right:hover {
+    z-index: 0;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        h2+h3+h3 {
+            color: red;
+        }
+
+        dt+dd {
+            color: blue;
+        }
+
+        h2+ol+dl {
+            color: aqua;
+        }
+
+        h1+hr {
+            border: dashed;
+        }
+    </style>
+</head>
+
+<!-- 
+    인접 형제 결합자는 인접된 태그 순서 상 마지막 태그에 부여할 때 사용 할 수 있다.
+    
+    태그 사이에 "+"를 띄어쓰기 없이 사용하여 **+**+**1 같이 쓰고 마지막 태그인 **1에만 속성 값이 적용된다.
+
+    h1+h2의 경우는 h1
+ -->
+
+<body>
+    <h1>인접 형제 결합자</h1>
+    <hr>
+
+    <h2>CSS</h2>
+    <h3>인라인 스타일 시트</h3>
+    <h3>내부 스타일 시트</h3>
+    <h3>외부 스타일 시트</h3>
+    <hr>
+
+    <h2>dfkjkfd</h2>
+    <ol>
+        <li></li>
+    </ol>
+
+    <dl>
+        <dt>인접 형제 결합자(Adjacent Sibling Combinator)</dt>
+        <dd>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Non sed autem assumenda itaque ipsum, distinctio error dolores
+            ipsa tempore nam enim, eos voluptates consequuntur modi sit
+            voluptatum, velit magnam natus!
+        </dd>
+    </dl>
+</body>
+
+</html>

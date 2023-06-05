@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display(list-item), display(table, table-cell)</title>
+
+    <style>
+        strong {
+            background-color: blueviolet;
+            color: yellow;
+            font-size: 2em;
+            margin: 2px;
+        }
+
+        /* 
+      < display : list-item >
+
+    - 지정한 요소를 리스트와 같은 형태로 구현.
+      지정 요소가 인라인 요소인 경우 리스트와 같은 블럭요소로 특성 변경.
+    */
+        strong {
+            display: list-item;
+        }
+
+        /* 
+      < display : table, table-cell >
+
+    - table : 부모 요소에 지정하여 table 태그와 같은 역할 부여.
+
+    - table-cell : 자식 요소에 지정하여 td 태그와 같은 역할 부여.
+    */
+        div {
+            display: table;
+            border: 1px solid;
+        }
+
+        p {
+            display: table-cell;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>display(list-item), display(table, table-cell)</h1>
+    <hr>
+
+    <h2>diplay(list-item)</h2>
+    <strong>1</strong>
+    <strong>2</strong>
+    <strong>3</strong>
+    <strong>4</strong>
+    <hr>
+
+    <h2>display(table, table-cell)</h2>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic corporis velit assumenda, nulla laboriosam,
+            distinctio debitis aspernatur dicta ad numquam animi vel. Corrupti aperiam iste assumenda eligendi est quos
+            nobis.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ea natus omnis excepturi distinctio
+            dicta
+            voluptas pariatur veritatis, ipsum, magnam quisquam velit expedita! Saepe, necessitatibus culpa? Voluptatum
+            eius
+            sit facilis.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ea natus omnis excepturi distinctio
+            dicta
+            voluptas pariatur veritatis, ipsum, magnam quisquam velit expedita! Saepe, necessitatibus culpa? Voluptatum
+            eius
+            sit facilis.</p>
+    </div>
+    <hr>
+</body>
+
+</html>

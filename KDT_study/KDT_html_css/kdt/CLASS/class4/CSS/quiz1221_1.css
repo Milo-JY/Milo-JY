@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+}
+
+header,
+main,
+footer {
+    width: calc(1024px * .8);
+    margin: auto;
+    text-align: center;
+    background-color: bisque;
+}
+
+main #section_article,
+main aside {
+    display: inline-block;
+}
+
+header,
+footer {
+    line-height: 20vh;
+}
+
+main #section_article {
+    width: 70%;
+}
+
+#section_article section {
+    line-height: calc(60vh * .6);
+    background-color: grey;
+}
+
+#section_article article {
+    line-height: calc(60vh * .4);
+    background-color: teal;
+}
+
+main aside{
+    width: 30%;
+    line-height: 60vh;
+    background-color: rosybrown;
+    float: right;
+}

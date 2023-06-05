@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+}
+
+header, main, footer {
+    width: calc(1024px * .8);
+    margin: auto;
+    text-align: center;
+}
+
+header, footer {
+    background-color: antiquewhite;
+    line-height: 20vh
+}
+
+main {
+    height: 60vh;
+}
+
+#section_article {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+}
+
+section {
+    background-color: silver;
+    line-height: calc(60vh * .6);
+}
+
+article {
+    background-color: cadetblue;
+    line-height: calc(60vh * .4);
+}
+
+aside {
+    width: 30%;
+    background-color: chocolate;
+    line-height: 60vh;
+    float: right;
+}

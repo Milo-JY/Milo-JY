@@ -1,0 +1,49 @@
+package com.jjy.test;
+
+interface Operator {
+	int test(int n1, int n2);
+}
+
+class Sum implements Operator {
+	@Override
+	public int test(int n1, int n2) {
+		return n1 + n2;
+	}
+}
+
+class Sub implements Operator {
+	@Override
+	public int test(int n1, int n2) {
+		return n1 - n2;
+	}
+}
+
+class Mul implements Operator {
+	@Override
+	public int test(int n1, int n2) {
+		return n1 * n2;
+	}
+}
+
+class Div implements Operator {
+	@Override
+	public int test(int n1, int n2) {
+		return n1 / n2;
+	}
+}
+
+
+public class Main{
+	public static void calculator(int n1, int n2, Operator op) {
+		System.out.printf("%d\n", op.test(n1, n2));
+	}
+	
+	public static void main(String[] args) {
+		calculator(10, 5, new Sum());
+		calculator(10, 5, new Sub());
+		calculator(10, 5, new Mul());
+		calculator(10, 5, new Div());
+	}
+	
+	
+}

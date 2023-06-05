@@ -1,0 +1,18 @@
+package com.jjy.test;
+
+class Super {
+	   int serialNum;
+	   String data = "슈퍼데이터";
+			   
+	   public void ouput() {
+		   System.out.printf("serialNum : %d\n", serialNum);
+		   System.out.printf("data : %s\n\n", data);
+	   }
+}
+
+	public class Main {
+	   public static void main(String[] args) {
+
+	      
+	   }
+	}

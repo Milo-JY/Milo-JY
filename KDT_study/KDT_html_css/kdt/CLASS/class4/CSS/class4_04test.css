@@ -1,0 +1,62 @@
+p {
+    margin: 0;
+}
+
+/* border 값을 개별로 지정 가능. */
+.box1 {
+    background: bisque;
+    display: inline-block;
+    width: 300px;
+    text-align: justify;
+    word-break: break-all;
+    border-style: solid;
+    border-width: 6px;
+    border-color: linen;
+}
+
+/* 
+border를 종류별, 위치별로 부여 가능.
+ */
+.box2 {
+    background: bisque;
+    display: inline-block;
+    width: 300px;
+    text-align: justify;
+    word-break: break-all;
+    border-style: solid dashed;
+    border-style: dashed double solid;
+    border-top-width: 30px;
+    border-bottom: solid 10px yellow;
+}
+
+
+/* ================= */
+.box3 {
+    background: url(../IMG/img_jeep_logo.png) center/200px no-repeat;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    border: solid 5px red;
+    border-radius: 10px 20px 30px 40px;
+}
+
+/* ==================== */
+.box4 {
+    background: url(../IMG/img_jeep_logo.png) center/200px no-repeat;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: solid 5px red;
+    border-radius: 50%;
+}
+
+/* ======================== */
+.box6 {
+    background: url(../IMG/img_jeep_logo.png) center/200px no-repeat;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    border: solid 5px red;
+    border-radius: 30% 50%;
+
+}

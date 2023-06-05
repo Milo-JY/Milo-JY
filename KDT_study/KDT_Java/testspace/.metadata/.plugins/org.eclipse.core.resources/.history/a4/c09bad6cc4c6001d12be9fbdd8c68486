@@ -1,0 +1,48 @@
+package com.jjy.test;
+
+class Car{
+   CarName name;               
+   String color;   
+   
+   Car(String aModel, int aYear, String aColor){
+      name=new CarName(aModel,aYear);
+      color=aColor;
+   }
+   
+   class CarName{       
+      String model;    
+      int year;        
+     
+      CarName(String aModel, int aYear){
+         model=aModel;
+         year=aYear;
+      }
+      
+     /*
+      * (참조) 이너클래스 내부에서 이너 클래스 필드 참조는 내부 직접 참조와 주 클래스를 통한 간접 참조가 외부 객체 생성 시 참조 주체가 
+      * 주 클래스 객체인지 또는 이너 클래스 객체인지에 따라 달라짐. 참조 주체가 주 클래스 객체인 경우, 이너 클래스 객체 자체가 주 클래스의
+      * 생성자에 종속되어 생성되어지므로 이너 클래스 내부 필드에 대한 직접참조와 주 클래스에서의 간접 참조는 동일한 대상을 가리킴.
+      * 반면 참조 주체가 외부에 생성된 이너 클래스 객체인 경우, 주 클래스 객체에 종속되어 생성되고 주 클래스의 모든 멤버를 직접 참조 가능한 
+      * 특성으로 인해 이너 클래스 생성자에 의해 생성된 내부 필드의 직접 참조와 주 클래스를 통한 간접참조는 대상이 다를 수 밖에 없음.
+      * 
+      * */
+      
+     void outSubInfo() {
+    	 System.out.printf("서브 클래스에서 직접 참조 : 모델=%s, 년식=%d\n", model, year);
+    	 System.out.printf("주 클래스에서 간접 참조 : 모델=%s, 년식=%d\n", name.model, name.year);
+     }
+   }
+}
+
+
+public class Main{
+   public static void main(String[] args)   {      
+      Car pride=new Car("프라이드",2005,"파랑");
+      Car.CarName pride2=pride.new CarName("프랑이", 2009);
+      
+      pride.name.outSubInfo();	// 주 클래스 객체 내부에 생성된 이너 클래스 타입의 멤버 메서드 호출.	      
+      System.out.println();
+      
+      pride2.outSubInfo();      // 
+   }   
+}

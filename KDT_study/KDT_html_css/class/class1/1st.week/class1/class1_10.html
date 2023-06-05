@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>figure 와 figcaption 태그</title>
+</head>
+
+<body>
+    <!--
+        < figure 태그 >
+
+    - 주 문서가 참조는 하지만 다른 부분으로 이동해도 문제가 되지 않는 독립적인 컨텐츠 특성을
+      가지는 이미지, 도표등을 구획화하고 figcaption 태그를 이용하여 컨텐츠에 대한 설명이나
+      범례등을 기술.
+
+    ※ figure 태그 내 table 요소가 유일한 자식인 경우에는 caption 태그를 대신하여 figcaption
+       태그를 이용하여 테이블의 제목이나 설명 또는 범례등을 기술하는 것을 권장.
+    
+    ==========================================================================================
+
+        < figcaption 태그 >
+
+    - figure 태그의 처음이나 마지막 요소로 배치하여 컨텐츠에 대한 제목이나 설명등을 기술.
+
+    -->
+    <figure>
+        <figcaption>테이블 구조</figcaption>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th scope="col">항목1</th>
+                    <th scope="col">항목2</th>
+                    <th scope="col">항목3</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">a</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">b</th>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">c</th>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">d</th>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th scope="row">총계</th>
+                    <td>22</td>
+                    <td>26</td>
+                    <td>30</td>
+                </tr>
+            </tfoot>
+        </table>
+    </figure>
+</body>
+
+</html>

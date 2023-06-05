@@ -1,0 +1,34 @@
+div {
+    background: yellowgreen;
+    height: 100px;
+    margin: 20px;
+    border: solid 1px ;
+}
+
+span {
+    background-color: aquamarine;
+}
+
+
+/* 
+    - 마진만 걸었을 때 : 블록과 인라인 마진 미공유.
+    - padding 걸었을 때 : 수직 패딩이 overflow 됨.
+*/
+.inline {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px;
+}
+
+/* 
+    - inline-block 부여 시 마진 적용이 가능하나, 서로 공유되지는 않음.
+    - 블럭요소와 인라인 블럭요소의 마진이 맞닿아도 중첩 X
+    
+    ===>>> 수직 마진의 공유는 블럭요소끼리만 가능함.
+*/
+.inlineBlock {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px;
+}

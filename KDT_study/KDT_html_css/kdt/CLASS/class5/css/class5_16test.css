@@ -1,0 +1,102 @@
+.box1 {
+    background-color: brown;
+}
+
+.box2 {
+    background-color: blueviolet;
+}
+
+.box3 {
+    background-color: blue;
+}
+
+.box4 {
+    background-color: red;
+}
+
+.box5 {
+    background-color: green;
+}
+
+.box6 {
+    background-color: yellowgreen;
+}
+
+.box7 {
+    background-color: black;
+}
+
+.box8 {
+    background-color: coral;
+}
+
+.box9 {
+    background-color: cadetblue;
+}
+
+.box10 {
+    background-color: deeppink;
+}
+
+.grid {
+    display: grid;
+    height: 500px;
+}
+
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+/* ================================= */
+/*  
+    < 요약 > 
+    - grid-row-start 또는 -end는 생략가능 
+        ===> grid-row: 0(start) / 0(end);
+        ===> 이걸로도 생략 가능! gird-row: 0 ;
+ */
+.container1 div {
+    /* grid-row: 1 / 2; */
+    /* grid-row: 1 / span1; */
+    /* grid-row: 1 / 1; */
+    grid-row: 1;
+}
+
+.container1 div {
+    grid-row: 3;
+}
+
+.container1 div {
+    grid-column: 1;
+}
+
+/* =========================== */
+
+.container2 {
+    grid-template: 1fr repeat(2, 2fr) repeat(4, 1fr) / repeat(2, 2fr) 1fr;
+}
+
+.container2 div {
+    grid-row: 1 / 2;
+    grid-row: 1 / span 1;
+    grid-row: 1;
+}
+
+.container2 div {
+    grid-row: 2 / 3;
+    grid-row: 2 / span 1;
+}
+
+.container2 div {
+    grid-row: 3;
+}
+
+.container2 div {
+    grid-column: ;
+}

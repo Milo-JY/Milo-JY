@@ -1,0 +1,39 @@
+package com.jjy.test;
+
+class Super {
+	   int serialNum;
+	   String data;
+	
+	   public Super(int serialNum, String data) {
+		   this.serialNum = serialNum;
+		   this.data = data;
+	   }
+	   
+	   public void ouput() {
+		   System.out.printf("serialNum : %d\n", serialNum);
+		   System.out.printf("data : %s\n\n", data);
+	   }
+}
+
+class Sub extends Super {
+	String data2;
+	
+	public Sub (int serialNum, String data, String data2) {
+		super(serialNum, data);
+		this.data2 = data2;
+	}
+	
+	public void ouput() {
+		super.ouput();
+		System.out.printf("data2 : %s\n\n", data2);
+	}
+	
+}
+
+	public class Main {
+	   public static void main(String[] args) {
+		   Sub sub1 = new Sub(1, "super1", "sub1");
+	      
+		   sub1.ouput();
+	   }
+	}

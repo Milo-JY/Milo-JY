@@ -1,0 +1,155 @@
+/* * {
+    margin: 0;
+}
+
+.container {
+    margin: 50% 50%;
+}
+
+.previous,
+.picture,
+.next {
+    position: absolute;
+}
+
+
+.picture {
+    width: 400px;
+    height: 500px;
+    border: solid 1px;
+    box-sizing: border-box;
+    background: url(../IMG/pic1.jpeg) no-repeat center/100% 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.container p {
+    line-height: 30px;
+    background-color: teal;
+    padding: 0 10px;
+    top: calc((500px - 30px)/2);
+}
+
+.previous {
+    left: calc(100% + 20px);
+}
+
+.next {
+    light: calc(100% + 20px);
+
+} */
+
+
+/*
+    < 문제 >
+
+- 화면구현 예시와 같은 슬라이드 화면을 구현하라.
+
+
+    < 조건 >
+
+1) 슬라이드 화면은 화면 중앙에 배치되도록 구현.
+
+2) HTML 설계 시 이미지와 슬라이드 버튼은 반드시 같은 계층(형제관계)이 되도록 구성.
+
+3) 슬라이드 버튼은 이미지의 수직 중앙에 배치되어야 하며 텍스트의 길이 변환와
+   관계없이 이미지와 항상 20px 간격이 유지되도록 구현.
+
+4) 슬라이드 버튼의 높이는 30px 로 지정하고 텍스트 좌우에는 10px 의 공간이 남도록 구현.
+
+5) 이미지는 백그라운드 지정.
+
+6) 이미지의 너비와 높이는 각각 400px, 500px 로 지정하고 부모에는 별도의 너비와 높이
+   미지정.
+*/
+
+/* =================== */
+/* 호준이꺼 */
+
+
+/* .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.picture{
+    box-sizing: border-box;
+    background: url(../IMG/pic1.jpeg)  no-repeat 0/ 400px 500px ;
+    width: 400px;
+    height: 500px;
+    border: 1px solid;
+}
+
+.button{
+    line-height: 30px;
+    background-color: cadetblue;
+    padding: 0 10px;
+    position: absolute;
+}
+
+.previous,
+.next{
+    top: calc((500px - 30px)/2);
+}
+.previous{
+    right: calc(100% + 20px);
+}
+
+.next{
+    left: calc(100% + 20px);
+} */
+
+/* ================================= */
+/* 강사님꺼 */
+
+* {
+    margin: 0;
+}
+
+.bg {
+    width: 400px;
+    height: 500px;
+    background: url(../IMG/pic1.jpeg) 0/100% 100%;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+.container {
+    margin: calc((100vh - 500px)/2) calc((100% - 400px)/2);
+    position: relative;
+}
+
+.container a {
+    padding: 0 10px;
+    line-height: 30px;
+    background-color: cadetblue;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+/* 가변(뷰포트 오른족이 계속 늘어날 것이기) 때문에 오른쪽을 기준으로 잡아줘야함. */
+.leftBtn {
+    right: calc(100% + 20px);
+}
+
+.rightBtn {
+    left: calc(100% + 20px);
+}
+
+/* ==================================== */
+/* 가상을 사용하면 html 상에 .bg가 필요없음 */
+.container::before {
+    content: "";
+    display: block;
+    width: 400px;
+        height: 500px;
+        background: url(../IMG/pic1.jpeg) 0/100% 100%;
+        box-sizing: border-box;
+        border: 1px solid;
+}

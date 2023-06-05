@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.jjy.sub1.Sub1"/>
+    <fullyQualifiedTypeName name="javax.lang.model.util.ElementScanner9"/>
+    <fullyQualifiedTypeName name="com.jjy.test.Const"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.jjy.test.Star"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="com.jjy.test.TankTier"/>
+    <fullyQualifiedTypeName name="com.jjy.test.Tier1"/>
+    <fullyQualifiedTypeName name="localInnerClass"/>
+    <fullyQualifiedTypeName name="com.jjy.test.SuperClass"/>
+    <fullyQualifiedTypeName name="com.jjy.test.Animal"/>
+    <fullyQualifiedTypeName name="com.jjy.test.Chihuahua"/>
+    <fullyQualifiedTypeName name="com.jjy.test.Operator"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header, main, footer {
+    width: calc(1024px * .8);
+    margin: auto;
+    text-align: center;
+}
+
+header h1,
+header a,
+header nav li,
+main #section_article,
+main aside,
+header nav {
+    display: inline-block;
+}
+
+header a {
+    text-indent: -9999em;
+}
+
+/* ================================================================ */
+/* header */
+
+header h1 a {
+    width: 150px;
+    height: 150px;
+    background: url(../image/starbucks_logo.jpg) 0/150px no-repeat;
+}
+
+header nav li a {
+    width: 108px;
+    height: 38px;
+    background: url(../image/CSS3_10__Box_Model_exam.JPG) -3px -3px;
+}
+
+header nav li:nth-child(2) a {
+    background-position-x: calc(-3px - 109px);
+}
+
+header nav li:nth-child(3) a {
+    background-position-x: calc(-3px - 109px * 2 - 1px);
+}
+
+header nav li:nth-child(4) a {
+    background-position-x: calc(-3px - 109px * 3 - 2px);
+}
+
+header nav li a:hover {
+    background-position-y: calc( -3px - 39px);
+}
+
+header h1 {
+    margin: calc((20vh - 150px)/2) 0;
+    vertical-align: top;
+}
+
+header nav li {
+    margin-left: 30px;
+}
+
+header nav {
+    margin: calc((20vh - 38px)/2) 0;
+}
+
+/* ================================================================ */
+/* main */
+
+main #section_article {
+    width: 70%;
+}
+
+main #section_article section {
+    line-height: calc(60vh * .6);
+    background-color: silver;
+}
+
+main #section_article article {
+    line-height: calc(60vh * .4);
+    background-color: cadetblue;
+}
+
+main aside {
+    width: 30%;
+    line-height: 60vh;
+    background-color: burlywood;
+    margin-left: -6px;
+    vertical-align: top;
+}
+
+/* ================================================================ */
+/* footer */
+
+footer {
+    line-height: 20vh;
+    background-color: antiquewhite;
+}

@@ -1,0 +1,48 @@
+p {
+    border: 3px solid blue;
+    height: 5em;
+}
+
+.text-indent1 {
+    text-indent: 40px;
+}
+
+/* 들여쓰기 이후에 텍스트가 다음 행으로 개열됨. */
+.text-indent2 {
+    text-indent: 5000px;
+}
+
+/* 텍스트를 안쪽으로 들여써서 화면에서 사라지게 만듬. */
+.text-indent3 {
+    text-indent: -5000px;
+}
+
+/* 
+스크린 리더 : 웹 표준을 위해 음성 서비스 등으로 연결하는 기능.
+*/
+
+/* 화면에서 생략 할 수는 있지만, 스크린 리더가 읽을 수 없음. */
+.jeep_logo span {
+    display: none;
+}
+
+.starbucks_logo a {
+    font-size: 3em;
+}
+
+.starbucks_logo a {
+    background-image: url(../../../img/img_starbucks_logo.jpg);
+}
+
+.starbucks_logo a {
+    display: inline-block;
+    width: 643px;
+    height: 500px;
+    text-indent: -5000em;
+}
+
+.starbucks_logo_small span {
+    display: inline-block;
+    text-indent: -9999em;
+
+}

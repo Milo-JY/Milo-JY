@@ -1,0 +1,35 @@
+package com.jjy.test;
+
+class SuperClass {
+	public void output() {
+		System.out.println("나는 슈퍼 클래스다.");
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+//		SuperClass superClass=new SuperClass();
+//		
+//		superClass.output();
+//		
+//		class LocalInnerClass extends SuperClass {
+//			public void output() {
+//				System.out.println("나는 지역 내부 클래스다.");
+//			}
+//		}
+//		
+//		LocalInnerClass localInnerClass=new localInnerClass();
+//		
+//		localInnerClass.output();
+		
+		
+		// 익명 객체를 만드는 방법 : 우선 	슈퍼 객체 생성 -> 클래스 정의 블록 삽입 -> 블록 내부에 오버라이딩 
+		// Js에서도 람다식을 사용하는 이유는 일회성 사용이 필요할 .
+		new SuperClass() {
+			public void output() {
+				System.out.println("나는 지역 내부 클래스다.");
+			}
+		}.output();
+		
+	}
+}

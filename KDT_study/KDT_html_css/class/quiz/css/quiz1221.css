@@ -1,0 +1,48 @@
+/* 1.fixed / absolute 
+2.container 박스는 사각형들 보다 작은 크기로
+2. 수직에만 반응
+3.텍스트 안삐져나오게
+4.html순서 : 상단1 왼쪽2 오른쪽3
+5.z축 확인 :왼쪽 ^ 상단 ^ 오른쪽
+6.상단호버하면 상단이 제일 위로
+왼쪽 호버시 제일 위로
+오른쪽 호버 시 제일 바닥으로
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    top: calc((100vh - 30vh)/2);
+    left: calc((100vw - 30vh)/2);
+    position: fixed;
+}
+
+.case {
+    position: absolute;
+    width: 30vh;
+    line-height: 30vh;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.box1 {
+    background-color: blue;
+    bottom: ;
+}
+
+.box2 {
+    background-color: lawngreen;
+}
+
+.box3 {
+    background-color: fuchsia;
+}
+

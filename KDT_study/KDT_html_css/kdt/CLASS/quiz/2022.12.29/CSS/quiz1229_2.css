@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+}
+
+.sub_container1,
+.sub_container2,
+.sub_container3,
+.sub_container4 {
+    width: 50%;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr)  ;   
+    height: 50vh;
+    gap: ;
+}
+
+.container div {
+    background-color: cadetblue;
+}
+
+.sub_container1 div:nth-child(2n),
+.sub_container4 div:nth-child(2n) {
+    background-color: slategray;
+}
+
+.sub_container2 div:nth-child(2n+1),
+.sub_container3 div:nth-child(2n+1) {
+    background-color: slategray;
+}
+
+

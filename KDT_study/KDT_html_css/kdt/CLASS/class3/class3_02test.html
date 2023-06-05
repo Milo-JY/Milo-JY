@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* ::before 또는 ::after 
+            : 사용할 때에는 :: 사이에 띄어쓰기 없이 붙여 써야함.
+        */
+        li {
+            list-style: none;
+        }
+
+        li:first-child::before {
+            content: " ♡";
+            color: red;
+        }
+
+        li:nth-child(2)::after {
+            content: " ♡";
+            color: red;
+        }
+
+        li:last-child::before,
+        li:last-child::after {
+            content: " ★ ";
+            color: blue;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>가상 요소 선택자</h1>    
+    <hr>
+
+    <h2>커리큘럼</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+p {
+    border: 1px solid burlywood;
+}
+
+/* <letter spacing > : 글자 사이 간격 설정.*/
+h2:nth-of-type(1):hover+p {
+    letter-spacing: 10px;
+}
+
+/* < word-spacing > : 단어 사이 간격 설정.*/
+h2:nth-of-type(2):hover+p {
+    word-spacing: 5px;
+}
+
+h2:nth-of-type(3):hover+p {
+    height: 150px;
+}
+
+h2:nth-of-type(3):hover+p {
+    line-height: 50px;
+}
+
+h2:nth-of-type(n+4)+p {
+    width: 500px;
+    height: 100px;
+}
+
+h2:nth-of-type(4):hover+p{
+    text-align: center;
+    line-height: 100px;
+}
+
+h2:nth-of-type(5):hover+p {
+    text-align: center;
+    line-height: 100px;
+}
+
+/* 
+    < line-height % 예외 >
+    - 부모요소에 적용 된 백분율이 적용 되지 않고 기본 16px 기준으로 적용 됨.    
+*/
+
+div {
+    text-align: center;
+    line-height: 100px;
+}
+
+h2:nth-of-type(6)+div p {
+    text-align: center;
+    line-height: 200%;
+}
+
+h2:nth-of-type(7)+div:hover p {
+    line-height: normal;
+}

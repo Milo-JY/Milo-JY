@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            color: red;
+        }
+
+        /* div *{
+            color: blue;
+        } */
+
+        div>ul>li {
+            color: blue;
+        }
+
+/* 더 명시적인 것을 따라가는데, div>*를 걸었을 경우 div에 상속되어 있는  자손인 li는 더 명시적인 * 을 따라 적용되어 진다. */
+
+        div>ul {
+            text-decoration: underline;
+        }
+
+        div li {
+            text-decoration: none;
+        }
+
+        div li {
+            text-decoration: overline;
+        }
+
+/*  
+    text-decoration은 예외!!!!!!@@@@@@
+    -----div>ul 보다 명시적인 div li가 있는데도, 예외적으로 상속으로 걸어놓은 div>ul이 더 명식적이라고 인식한다.
+*/
+    </style>
+</head>
+
+<body>
+    <h1>범용 선택자</h1>
+    <hr>
+
+    <h2>조부모</h2>
+    <ul>
+        <li>할아버지</li>
+        <li>할머니</li>
+    </ul>
+    <hr>
+
+    <div>
+        <h2>부모님</h2>
+        <ul>
+            <li>아빠</li>
+            <li>엄마</li>
+        </ul>
+    </div>
+</body>
+
+</html>

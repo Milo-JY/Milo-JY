@@ -1,0 +1,112 @@
+class kTank {
+   String tankName;
+   int cannon;
+   boolean missile=false;
+   boolean initChk;
+   
+   kTank (int cannon, boolean missile) {
+	   this.cannon = cannon;
+	   this.missile = missile;
+   }
+   
+   kTank (int cannon, boolean missile, String tankName) {
+	  this(cannon,missile);
+      this.tankName = tankName;
+      initChk = true;
+   }
+
+   void infoTank() {
+      if (initChk) {
+         System.out.printf("탱크명 : %s, ", tankName);
+         System.out.printf("포종류 : %d단계, ", cannon);
+         System.out.printf("미사일 %s장착\n", missile ? "" : "미");
+      }
+   }
+   
+   void printTankName() {
+	   System.out.printf("\n\n< %s 공격 >\n", tankName);
+   }
+   
+   void missileAttack() {
+	   if (missile) {
+		   System.out.println("미사일 발사 : 초전박살");
+	   } else {
+		   System.out.println(" ");
+	   }
+   }
+   
+   void cannonAttack() {
+      if (initChk) {
+         String boom = null;
+         
+         
+         printTankName();
+         
+         switch (cannon) {
+         case 1:
+            boom = "펑";
+            break;
+         case 2:
+            boom = "펑펑";
+            break;
+         case 3:
+            boom = "콰쾅";
+            break;
+         }
+
+         System.out.printf("대포발사 : %s\n", boom);
+      }
+   }
+   
+   void fireCannon() {
+	   if (initChk) {
+		   cannonAttack();
+	   }
+   }
+   
+   void fireMissile() {
+	   if (initChk) {
+		   if(missile) {
+			   printTankName();
+			   missileAttack();
+		   }
+	   }
+   }
+   
+   void attack() {
+	   if (initChk) {
+//		   printTankName();
+		   if(missile) {
+//			   printTankName();
+			   cannonAttack();
+			   missileAttack();
+		   }
+	   }
+   }
+   
+}
+
+
+public class ClassQuiz_03_tank {
+   public static void main(String[] args) {
+	  kTank k1 = new kTank(1, false, "K1");
+	  kTank k2 = new kTank(2, false, "K2");
+	  kTank k3 = new kTank(3, true, "K3");  
+      
+      k1.infoTank();
+      k2.infoTank();
+      k3.infoTank();
+      
+      k1.fireCannon();
+      k2.fireCannon();
+      k3.fireCannon();
+      
+      k1.fireMissile();
+      k2.fireMissile();
+      k3.fireMissile();
+      
+      k1.attack();
+      k2.attack();
+      k3.attack();
+   }
+}

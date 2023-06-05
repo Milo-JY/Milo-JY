@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+            우선순위 계층도 - 범용 * < 태그 <  id  < 클래스 <    인라인    <   !important
+                              0       1      10     100    가장우선:요소    가장우선:속성
+            같은 계층에 있다면 마지막에 명시한게 우선!
+            !important의 경우에는 일반적인 경우의 사용은 지양함.
+            (사용하는 경우 : 빌드 또는 구동 이후 다른 스타일 코드를 인용할 경우에 후첨 식으로 사용.)
+        */
+
+        * {
+            color: brown;
+        }
+
+        p {
+            color: lightslategray;
+        }
+
+        /* 
+            p 태그 외에도 동일 선택자에 대한 동일 속성 스타일로 지정하면,
+            제일 마지막에 명시한 선택자의 스타일로 적용됨.
+        */
+        p {
+            color: blue;
+        }
+
+        .classStyle {
+            color: green;
+        }
+
+        #idStyle {
+            color: aqua;
+        }
+
+        div {
+            color: yellow !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Priority</h1>
+
+    <h2>CSS priority settings!!<br>
+        범용 선택자 스타일 우선 적용!!<br>
+        Complete!!
+    </h2>
+
+    <p>
+        CSS priority settings!!<br>
+        태그 선택자 스타일 우선 적용!!<br>
+        Complete!!
+    </p>
+
+    <p class="classStyle">
+        CSS priority settings!!<br>
+        클래스 선택자 스타일 우선 적용!!<br>
+        Complete!!
+    </p>
+
+    <p id="idStyle" class="classStyle">
+        CSS priority settings!!<br>
+        id 선택자 스타일 우선 적용!!<br>
+        Complete!!
+    </p>
+
+    <p class="classStyle" style="color:deeppink">
+        CSS priority settings!!<br>
+        인라인 스타일 우선 적용!!<br>
+        Complete!!
+    </p>
+
+    <div style="color:red">
+        CSS priority settings!!<br>
+        <em>!important</em> 우선 적용!!<br>
+        Complete!!
+    </div>
+
+    <div>
+        <p>
+            CSS priority settings!!<br>
+            가장 가깝고 명식적 스타일 우선 적용!!<br>
+            Complete!!
+        </p>
+    </div>
+</body>
+</html>

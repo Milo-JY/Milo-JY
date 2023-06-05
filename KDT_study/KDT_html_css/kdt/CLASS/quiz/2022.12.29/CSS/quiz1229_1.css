@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header,
+main {
+    width: 600px;
+    margin: auto;
+}
+/* ======================================= */
+
+nav>ul {
+    line-height: 40px;
+    color: white;
+    background-color: teal;
+
+    display: flex;
+}
+
+nav ul,
+nav li {
+    width: 100%;
+}
+
+nav li {
+    padding-left: 20px;
+}
+
+nav>ul>li {
+    position: relative;
+}
+
+nav>ul>li>ul {
+    display: none;
+    position: absolute;
+    left: 0;
+}
+
+nav>ul>li>ul>li {
+    background-color: cadetblue;
+}
+
+nav>ul>li:hover ul {
+    display: block;
+}
+
+/* ========================================== */
+
+main p {
+    text-align: justify;
+    word-break: break-all;
+    margin-top: 20px;
+}

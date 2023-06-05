@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>범용 선택자(Universal Selector)</title>
+
+    <style>
+        /*
+            < 범용 선택자(Universal Selector) >
+
+        - 모든 태그를 지칭.
+
+        형식 : * {       }
+
+        */
+
+
+        * {
+            color: red;
+        }
+
+        div * {
+            color: blue;
+        }
+
+        /* 
+            < 선택자의 우선 순위 >
+
+        - 선택자의 우선 순위는 명시적 표현이 가장 가까운 것을 최우선 적용.
+          위의 예시의 경우 모든 태그를 지칭하는 * 보다는 div 태그의 모든
+          상속 계층의 태그를 지칭하는 div * 선택자 형식이 더 명식적이므로
+          우선 적용.
+          하지만 아래와 같이 자식(하위) 선택자를 이용하는 경우 div 의 모든
+          자식 태그까지는 우선 순위가 먼저 적용되지만, 그 이하 상속 계층의
+          하위 태그는 상속에 의한 속성이 전달될뿐 모든 태그를 의미하는 *
+          보다는 명시적 특성이 떨어지므로 * 선택자가 우선 적용.
+        */
+
+        /* div>* {
+            color:blue;
+        } */
+
+        /* =================================================================================== */
+
+        /* 
+            < text-decoration 속성의 상속과 우선 순위 예외 >
+
+        - text-decoration 속성은 다른 속성과 마찬가지로 자손에 상속되지만 자손 요소에서 none 값을
+          적용하여 텍스트 장식 제거는 불가. 개발자 도구에서는 none 으로 확인되지만 실제 디스플레이
+          되는 형태는 그대로 텍스트 장식이 적용되는 것을 확인 가능.
+          따라서 부모 요소에석 적용한 text-decoration 적용한 텍스트 장식은 자식 요소에서 추가는
+          되지만 제거는 불가.
+        
+        */
+        /* div>ul {
+            text-decoration:underline;
+        } */
+
+        /* div li {
+            text-decoration:none;
+        } */
+
+        /* div li {
+            text-decoration:overline;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>범용 선택자</h1>
+    <hr>
+
+    <h2>조부모</h2>
+    <ul>
+        <li>할아버지</li>
+        <li>할머니</li>
+    </ul>
+    <hr>
+
+    <div>
+        <h2>부모님</h2>
+        <ul>
+            <li>아빠</li>
+            <li>엄마</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header, main {
+    width: 600px;
+    margin: auto;
+}
+
+/* ============================================== */
+/* header */
+
+header nav {
+    margin-bottom: 20px;
+    color: white;
+}
+
+header nav li {
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+header nav>ul {
+    background-color: darkslategray;
+}
+
+/* 
+    <요약>
+    1.float을 걸고 상쇄기키는 방법 2가지,
+
+        1) float 대상요소의 부모에게 inline-block 걸어주기
+        
+        2) 가상컨텐츠 만들기(부모요소에 ::after, 컨텐츠""와 디스플레이 block, clear로 상쇄.)
+
+*/
+
+
+header nav>ul::after{
+    content: "";
+    display: block;
+    clear: left;
+}
+
+header nav>ul>li {
+    float: left;
+    width: 25%;
+    line-height: 40px;
+    position: relative;
+}
+
+header nav>ul ul {
+    background-color: cadetblue;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+header nav>ul>li:hover ul {
+    display: block;
+    width: 100%;
+}
+
+header nav>ul>li li {
+    font-size: .7em;
+}
+
+/* ============================================== */
+/* main */
+
+main p {
+    text-align: justify;
+    word-break: break-all;
+}

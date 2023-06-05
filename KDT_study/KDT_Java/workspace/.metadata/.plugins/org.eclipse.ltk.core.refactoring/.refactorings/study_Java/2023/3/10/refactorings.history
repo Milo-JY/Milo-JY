@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;multi_array_quiz.java&apos; to &apos;Multi_array_quiz.java&apos;&#x0A;- Original project: &apos;study_Java&apos;&#x0A;- Original element: &apos;multi_array_quiz.java&apos;&#x0A;- Renamed element: &apos;Multi_array_quiz.java&apos;" description="Rename compilation unit &apos;multi_array_quiz.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{multi_array_quiz.java" name="Multi_array_quiz.java" references="false" stamp="1678348876736" version="1.0"/>
+</session>

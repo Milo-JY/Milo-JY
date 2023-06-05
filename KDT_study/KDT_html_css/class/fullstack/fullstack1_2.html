@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 작성 규칙과 엔터티코드</title>
+</head>
+
+<!--
+    < 태그 작성 규칙 >
+
+1> 모든 태그는 소문자로 작성하는 것이 원칙.
+
+2> 연속된 white-space character(space, tab, enter)는 하나만 인정.
+
+3> 웹 페이지에 표시하려는 특수문자(<, > ," , &, 연속된 공백 등)는 "&" 와 ";" 사이에 예약어를 입력하여 표시.
+  ( 4-HTML5-2_특수문자 - 엑셀 파일 참조,    https://entitycode.com  - 참조 )
+
+4> 웹 표준은 HTML, CSS, Javascript 가 모두 분리되어 작성되어야함이 원칙.
+-->
+
+<body>
+    &lt; &quot;HTML&quot;&nbsp;&nbsp;&nbsp;
+    &quot;Character&quot;&nbsp;&nbsp;&nbsp;
+    &quot;Entity&quot; &gt; &amp; 학습
+
+    <!--
+        < pre 태그 >    -  Preformatted Text 
+
+    - White-space character(space, tab, enter)를 입력한 그대로 표시.
+      단, 그 외 특수문자는 entitycode 형식 그대로 표현해야함에 주의.
+    -->
+    <pre
+        style="color: rgb(55, 0, 255);">&lt; &quot;HTML&quot; &quot;Character&quot; &quot;Entity&quot; &gt; &amp; 학습</pre>
+    <!-- 상기 pre 태그의 style 속성은 CSS 를 인라인(Inline) 스타일로 지정한 것으로 웹 표준에 위배. -->
+</body>
+
+</html>

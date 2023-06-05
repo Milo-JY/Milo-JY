@@ -1,0 +1,35 @@
+/* 
+    < border-collapse >
+        : 테이블 테두리 라인에 잡히는 경계선 간격을 붕괴시켜 합쳐준다.
+*/
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 2px solid red;
+    width: 140px;
+}
+
+th {
+    color: blue;
+}
+
+td {
+    height: 120px;
+    text-align: center;
+}
+
+.ver-top {
+    vertical-align: top;
+}
+
+.ver-middle {
+    vertical-align: middle;
+}
+
+.ver-bottom {
+    vertical-align: bottom;
+}

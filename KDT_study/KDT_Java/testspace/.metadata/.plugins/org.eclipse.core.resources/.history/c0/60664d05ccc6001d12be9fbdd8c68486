@@ -1,0 +1,38 @@
+package com.jjy.test;
+
+abstract class Dog {
+	void swingTail() {
+		System.out.println("살랑살랑");
+	}
+	
+	abstract void bark();
+}
+
+class Jindo extends Dog {
+	void bark() {
+		System.out.println("멍멍");
+	}
+}
+
+class Chihuahua extends Dog {
+	void bark() {
+		System.out.println("왈왈");
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Jindo jindol = new Jindo();
+		Chihuahua happy = new Chihuahua();
+		
+		jindol.bark();
+		happy.bark();
+		System.out.println();
+		
+		
+	}
+	
+	static void dogCafe(Dog dog) {
+		dog.bark();
+	}
+}
