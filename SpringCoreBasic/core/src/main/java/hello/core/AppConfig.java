@@ -11,6 +11,10 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+// AppConfig 스프링 기반으로 변경
+// 1) AppConfig에 설정을 구성한다는 뜻의 @Configuration 애노테이션을 붙여준다.
+// 2) 각 메서드에 @Bean 붙이기 -> 스프링 컨테이너에 빈을 등록
+
 @Configuration
 public class AppConfig {
 
